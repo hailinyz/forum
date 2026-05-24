@@ -1,0 +1,18 @@
+# Spring全局配置
+spring:
+  application:
+    name: 论坛系统
+
+# 服务器配置
+server:
+  port: 58080
+
+# 日志配置
+logging:
+  pattern:
+    dateformat: yyyy-MM-dd HH:mm:ss # 日期格式
+  level:
+    root: info # 默认日志级别
+    com.bite.forum: debug
+  file:
+    path: D:/项目学习Java/论坛系统/forum/forum/log # 日志文件路径
