@@ -2,11 +2,14 @@
 spring:
   application:
     name: 论坛系统
+  output:
+    ansi:
+      enabled: always # 控制台输出颜色
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/forum_db?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
     username: root
     password: 123456
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 # 服务器配置
 server:
@@ -21,3 +24,7 @@ logging:
     com.bite.forum: debug
   file:
     path: D:/项目学习Java/论坛系统/forum/forum/log # 日志文件路径
+
+# mybatis 相关配置
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml # 扫描的mapper文件

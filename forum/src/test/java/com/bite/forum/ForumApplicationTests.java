@@ -1,5 +1,7 @@
 package com.bite.forum;
 
+import com.bite.forum.dao.UserMapper;
+import com.bite.forum.model.User;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,6 +15,16 @@ class ForumApplicationTests {
     //数据源
     @Resource
     private DataSource dataSource;
+
+    @Resource
+    private UserMapper userMapper;
+
+    @Test
+    void testUserMapper() {
+        User user = userMapper.selectByPrimaryKey(1L);
+        System.out.println(user.getUsername());
+    }
+
 
     @Test
     void testDataSource() throws Exception {
