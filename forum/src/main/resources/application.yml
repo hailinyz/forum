@@ -15,6 +15,15 @@ spring:
 server:
   port: 58080
 
+# SpringDoc OpenAPI配置
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui/index.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+
 # 日志配置
 logging:
   pattern:
@@ -28,3 +37,4 @@ logging:
 # mybatis 相关配置
 mybatis:
   mapper-locations: classpath:mapper/**/*.xml # 扫描的mapper文件
+

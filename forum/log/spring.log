@@ -1,428 +1,693 @@
-2026-05-24 16:43:42  INFO 37256 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 37256 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
-2026-05-24 16:43:42 DEBUG 37256 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-05-24 16:43:42  INFO 37256 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-05-24 16:43:42  INFO 37256 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-05-24 16:43:42  INFO 37256 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-05-24 16:43:42  INFO 37256 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
-2026-05-24 16:43:42  INFO 37256 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-24 16:43:42  INFO 37256 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-05-24 16:43:42  INFO 37256 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-24 16:43:42  INFO 37256 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 507 ms
-2026-05-24 16:43:42  INFO 37256 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-05-24 16:43:42  INFO 37256 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
-2026-05-24 16:43:42  INFO 37256 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 1.055 seconds (process running for 1.357)
-2026-05-24 16:43:52  INFO 37256 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-24 16:43:52  INFO 37256 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-05-24 16:57:26  INFO 50420 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 50420 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
-2026-05-24 16:57:26 DEBUG 50420 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-05-24 16:57:26  INFO 50420 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-05-24 16:57:26  INFO 50420 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-05-24 16:57:26  INFO 50420 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-05-24 16:57:26  INFO 50420 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
-2026-05-24 16:57:26  INFO 50420 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-24 16:57:26  INFO 50420 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-05-24 16:57:26  INFO 50420 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-24 16:57:26  INFO 50420 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 546 ms
-2026-05-24 16:57:27  INFO 50420 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-05-24 16:57:27  INFO 50420 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
-2026-05-24 16:57:27  INFO 50420 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 1.172 seconds (process running for 1.576)
-2026-05-24 16:57:34  INFO 50420 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-24 16:57:34  INFO 50420 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-05-24 17:19:30  INFO 36852 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Starting ForumApplicationTests using Java 17.0.9 with PID 36852 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
-2026-05-24 17:19:30 DEBUG 36852 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-05-24 17:19:30  INFO 36852 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2026-05-24 17:19:31  WARN 36852 --- [论坛系统] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bite.forum]' package. Please check your configuration.
-2026-05-24 17:19:32  INFO 36852 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Started ForumApplicationTests in 1.85 seconds (process running for 2.727)
-2026-05-24 17:20:42  INFO 25876 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Starting ForumApplicationTests using Java 17.0.9 with PID 25876 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
-2026-05-24 17:20:42 DEBUG 25876 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-05-24 17:20:42  INFO 25876 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2026-05-24 17:20:43  WARN 25876 --- [论坛系统] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bite.forum]' package. Please check your configuration.
-2026-05-24 17:20:44  INFO 25876 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Started ForumApplicationTests in 2.016 seconds (process running for 2.906)
-2026-05-24 17:20:44  INFO 25876 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-24 17:20:45  INFO 25876 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@15914bb5
-2026-05-24 17:20:45  INFO 25876 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-24 17:20:45  INFO 25876 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-24 17:20:45  INFO 25876 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-24 17:26:19  INFO 44564 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Starting ForumApplicationTests using Java 17.0.9 with PID 44564 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
-2026-05-24 17:26:19 DEBUG 44564 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-05-24 17:26:19  INFO 44564 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2026-05-24 17:26:20  INFO 44564 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Started ForumApplicationTests in 1.448 seconds (process running for 2.204)
-2026-05-24 17:26:20  WARN 44564 --- [论坛系统] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.bite.forum.ForumApplicationTests@609319c3]
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.bite.forum.ForumApplicationTests': Injection of resource dependencies failed
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:372) ~[spring-context-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:405) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:156) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:111) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:388) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:293) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:292) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:281) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:280) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:112) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:111) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:66) ~[junit5-rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) ~[junit-rt.jar:na]
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@jakarta.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class, mappedName="")}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2315) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1733) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:598) ~[spring-context-6.2.18.jar:6.2.18]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:576) ~[spring-context-6.2.18.jar:6.2.18]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:738) ~[spring-context-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:272) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:369) ~[spring-context-6.2.18.jar:6.2.18]
-	... 79 common frames omitted
-
-2026-05-24 17:26:35  INFO 41684 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Starting ForumApplicationTests using Java 17.0.9 with PID 41684 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
-2026-05-24 17:26:35 DEBUG 41684 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-05-24 17:26:35  INFO 41684 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2026-05-24 17:26:35  WARN 41684 --- [论坛系统] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bite.forum]' package. Please check your configuration.
-2026-05-24 17:26:36  INFO 41684 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Started ForumApplicationTests in 1.832 seconds (process running for 2.635)
-2026-05-24 17:26:37  INFO 41684 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-24 17:26:37  INFO 41684 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@15914bb5
-2026-05-24 17:26:37  INFO 41684 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-24 17:26:37  INFO 41684 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-24 17:26:37  INFO 41684 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-24 17:31:08  INFO 52860 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Starting ForumApplicationTests using Java 17.0.9 with PID 52860 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
-2026-05-24 17:31:08 DEBUG 52860 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-05-24 17:31:08  INFO 52860 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2026-05-24 17:31:09  WARN 52860 --- [论坛系统] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bite.forum]' package. Please check your configuration.
-2026-05-24 17:31:10  INFO 52860 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Started ForumApplicationTests in 1.893 seconds (process running for 2.728)
-2026-05-24 17:31:10  INFO 52860 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-24 17:31:11  INFO 52860 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@2558f65c
-2026-05-24 17:31:11  INFO 52860 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-24 17:31:11  INFO 52860 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-24 17:31:11  INFO 52860 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-24 17:47:32  INFO 53728 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Starting ForumApplicationTests using Java 17.0.9 with PID 53728 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
-2026-05-24 17:47:32 DEBUG 53728 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-05-24 17:47:32  INFO 53728 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2026-05-24 17:47:33  WARN 53728 --- [论坛系统] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bite.forum]' package. Please check your configuration.
-2026-05-24 17:47:34  INFO 53728 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Started ForumApplicationTests in 1.793 seconds (process running for 2.672)
-2026-05-24 17:47:34  INFO 53728 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-24 17:47:34  INFO 53728 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7b332b23
-2026-05-24 17:47:34  INFO 53728 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-24 17:47:35  INFO 53728 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-24 17:47:35  INFO 53728 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-24 21:28:45  INFO 42376 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Starting ForumApplicationTests using Java 17.0.9 with PID 42376 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
-2026-05-24 21:28:45 DEBUG 42376 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-05-24 21:28:45  INFO 42376 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2026-05-24 21:28:46  WARN 42376 --- [论坛系统] [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'articleMapper' defined in file [D:\项目学习Java\论坛系统\forum\forum\target\classes\com\bite\forum\dao\ArticleMapper.class]: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String
-2026-05-24 21:28:46  INFO 42376 --- [论坛系统] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-05-25 12:55:56  INFO 23156 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Starting ForumApplicationTests using Java 17.0.9 with PID 23156 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 12:55:56 DEBUG 23156 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 12:55:56  INFO 23156 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 12:55:58  INFO 23156 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Started ForumApplicationTests in 1.814 seconds (process running for 2.505)
+2026-05-25 12:55:58  INFO 23156 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-25 12:55:58  INFO 23156 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b5af65b
+2026-05-25 12:55:58  INFO 23156 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-25 12:55:58 DEBUG 23156 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where id = ?
+2026-05-25 12:55:58 DEBUG 23156 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2026-05-25 12:55:58 DEBUG 23156 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2026-05-25 12:55:58  INFO 23156 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-25 12:55:58  INFO 23156 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-25 21:28:34  INFO 20732 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Starting ForumApplicationTests using Java 17.0.9 with PID 20732 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 21:28:34 DEBUG 20732 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 21:28:34  INFO 20732 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 21:28:36  INFO 20732 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Started ForumApplicationTests in 2.384 seconds (process running for 3.524)
+2026-05-25 21:28:36  INFO 20732 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-25 21:28:36  INFO 20732 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f591271
+2026-05-25 21:28:36  INFO 20732 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-25 21:28:36 DEBUG 20732 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where id = ?
+2026-05-25 21:28:36 DEBUG 20732 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2026-05-25 21:28:36 DEBUG 20732 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2026-05-25 21:28:36  INFO 20732 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-25 21:28:36  INFO 20732 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-25 21:38:09  INFO 4728 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Starting ForumApplicationTests using Java 17.0.9 with PID 4728 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 21:38:09 DEBUG 4728 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 21:38:09  INFO 4728 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 21:38:11  INFO 4728 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Started ForumApplicationTests in 2.138 seconds (process running for 3.013)
+2026-05-25 21:38:12  INFO 4728 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-25 21:38:12  INFO 4728 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a5b38e6
+2026-05-25 21:38:12  INFO 4728 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-25 21:38:12 DEBUG 4728 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where id = ?
+2026-05-25 21:38:12 DEBUG 4728 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2026-05-25 21:38:12 DEBUG 4728 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2026-05-25 21:38:12  INFO 4728 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-25 21:38:12  INFO 4728 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-25 21:38:35  INFO 27300 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 27300 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 21:38:35 DEBUG 27300 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 21:38:35  INFO 27300 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 21:38:35  INFO 27300 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-25 21:38:35  INFO 27300 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-25 21:38:35  INFO 27300 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 21:38:35  INFO 27300 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 21:38:35  INFO 27300 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 21:38:35  INFO 27300 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 21:38:35  INFO 27300 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 652 ms
+2026-05-25 21:38:36  INFO 27300 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 21:38:36  INFO 27300 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 21:38:36  INFO 27300 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 1.37 seconds (process running for 1.729)
+2026-05-25 21:39:17  INFO 27300 --- [论坛系统] [http-nio-58080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-25 21:39:17  INFO 27300 --- [论坛系统] [http-nio-58080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-25 21:39:17  INFO 27300 --- [论坛系统] [http-nio-58080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-25 21:39:17 ERROR 27300 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.exception.GlobalExceptionHandler   : 这是一个Exception...
+2026-05-25 21:39:17  WARN 27300 --- [论坛系统] [http-nio-58080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.Exception: 这是一个Exception...]
+2026-05-25 21:39:17 ERROR 27300 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.exception.GlobalExceptionHandler   : No static resource favicon.ico.
+2026-05-25 21:39:17  WARN 27300 --- [论坛系统] [http-nio-58080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-05-25 21:39:36 ERROR 27300 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.exception.GlobalExceptionHandler   : 这是一个ApplicationException...
+2026-05-25 21:39:36  WARN 27300 --- [论坛系统] [http-nio-58080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bite.forum.exception.ApplicationException: 这是一个ApplicationException...]
+2026-05-25 21:39:36 ERROR 27300 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.exception.GlobalExceptionHandler   : No static resource favicon.ico.
+2026-05-25 21:39:36  WARN 27300 --- [论坛系统] [http-nio-58080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-05-25 22:00:35  INFO 27300 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 22:00:35  INFO 27300 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 22:15:56  INFO 15604 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 15604 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 22:15:56 DEBUG 15604 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:15:56  INFO 15604 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:15:56  INFO 15604 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-25 22:15:56  INFO 15604 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-25 22:15:57  WARN 15604 --- [论坛系统] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.TypeNotPresentException: Type javax.servlet.http.HttpServletRequest not present
+2026-05-25 22:15:57  INFO 15604 --- [论坛系统] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-05-24 21:28:46 ERROR 42376 --- [论坛系统] [main] o.s.boot.SpringApplication               : Application run failed
+2026-05-25 22:15:57 ERROR 15604 --- [论坛系统] [restartedMain] o.s.boot.SpringApplication               : Application run failed
 
-org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'articleMapper' defined in file [D:\项目学习Java\论坛系统\forum\forum\target\classes\com\bite\forum\dao\ArticleMapper.class]: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:864) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getType(AbstractBeanFactory.java:744) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAnnotationOnBean(DefaultListableBeanFactory.java:818) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.boot.sql.init.dependency.AnnotationDependsOnDatabaseInitializationDetector.detect(AnnotationDependsOnDatabaseInitializationDetector.java:36) ~[spring-boot-3.5.14.jar:3.5.14]
-	at org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor.detectDependsOnInitializationBeanNames(DatabaseInitializationDependencyConfigurer.java:152) ~[spring-boot-3.5.14.jar:3.5.14]
-	at org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor.postProcessBeanFactory(DatabaseInitializationDependencyConfigurer.java:115) ~[spring-boot-3.5.14.jar:3.5.14]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363) ~[spring-context-6.2.18.jar:6.2.18]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:197) ~[spring-context-6.2.18.jar:6.2.18]
+java.lang.TypeNotPresentException: Type javax.servlet.http.HttpServletRequest not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1211) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:553) ~[spring-core-6.2.18.jar:6.2.18]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:501) ~[spring-core-6.2.18.jar:6.2.18]
+	at org.springframework.core.ResolvableType.forClass(ResolvableType.java:1157) ~[spring-core-6.2.18.jar:6.2.18]
+	at org.springframework.plugin.core.config.PluginRegistriesBeanDefinitionRegistrar.getTargetType(PluginRegistriesBeanDefinitionRegistrar.java:101) ~[spring-plugin-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.plugin.core.config.PluginRegistriesBeanDefinitionRegistrar.registerBeanDefinitions(PluginRegistriesBeanDefinitionRegistrar.java:71) ~[spring-plugin-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.context.annotation.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:409) ~[spring-context-6.2.18.jar:6.2.18]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:408) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:430) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.18.jar:6.2.18]
 	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:792) ~[spring-context-6.2.18.jar:6.2.18]
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:610) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.14.jar:3.5.14]
 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.14.jar:3.5.14]
 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.14.jar:3.5.14]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.14.jar:3.5.14]
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:151) ~[spring-boot-test-3.5.14.jar:3.5.14]
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.2.18.jar:6.2.18]
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.2.18.jar:6.2.18]
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461) ~[spring-boot-3.5.14.jar:3.5.14]
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:590) ~[spring-boot-test-3.5.14.jar:3.5.14]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:151) ~[spring-boot-test-3.5.14.jar:3.5.14]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110) ~[spring-boot-test-3.5.14.jar:3.5.14]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:388) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:293) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:292) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:281) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:280) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:112) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:111) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:66) ~[junit5-rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) ~[junit-rt.jar:na]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.14.jar:3.5.14]
+	at com.bite.forum.ForumApplication.main(ForumApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.14.jar:3.5.14]
+Caused by: java.lang.ClassNotFoundException: javax.servlet.http.HttpServletRequest
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 37 common frames omitted
 
-2026-05-24 21:28:46  WARN 42376 --- [论坛系统] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.bite.forum.ForumApplicationTests@3069a360]
+2026-05-25 22:21:53  INFO 29316 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 29316 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 22:21:53 DEBUG 29316 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:21:53  INFO 29316 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:21:53  INFO 29316 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-25 22:21:53  INFO 29316 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-25 22:21:54  WARN 29316 --- [论坛系统] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.TypeNotPresentException: Type javax.servlet.http.HttpServletRequest not present
+2026-05-25 22:21:54  INFO 29316 --- [论坛系统] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
 
-java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@1a256d80 testClass = com.bite.forum.ForumApplicationTests, locations = [], classes = [com.bite.forum.ForumApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6d5620ce, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4f49f6af, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@24105dc5, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@7d7758be, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@68746f22, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@35b74c5c, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@b2dc3482], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:388) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:293) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:292) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:281) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:280) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:112) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:111) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:66) ~[junit5-rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) ~[junit-rt.jar:na]
-Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'articleMapper' defined in file [D:\项目学习Java\论坛系统\forum\forum\target\classes\com\bite\forum\dao\ArticleMapper.class]: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:864) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getType(AbstractBeanFactory.java:744) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAnnotationOnBean(DefaultListableBeanFactory.java:818) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.boot.sql.init.dependency.AnnotationDependsOnDatabaseInitializationDetector.detect(AnnotationDependsOnDatabaseInitializationDetector.java:36) ~[spring-boot-3.5.14.jar:3.5.14]
-	at org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor.detectDependsOnInitializationBeanNames(DatabaseInitializationDependencyConfigurer.java:152) ~[spring-boot-3.5.14.jar:3.5.14]
-	at org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor.postProcessBeanFactory(DatabaseInitializationDependencyConfigurer.java:115) ~[spring-boot-3.5.14.jar:3.5.14]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363) ~[spring-context-6.2.18.jar:6.2.18]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:197) ~[spring-context-6.2.18.jar:6.2.18]
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-25 22:21:54 ERROR 29316 --- [论坛系统] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.TypeNotPresentException: Type javax.servlet.http.HttpServletRequest not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1211) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:553) ~[spring-core-6.2.18.jar:6.2.18]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:501) ~[spring-core-6.2.18.jar:6.2.18]
+	at org.springframework.core.ResolvableType.forClass(ResolvableType.java:1157) ~[spring-core-6.2.18.jar:6.2.18]
+	at org.springframework.plugin.core.config.PluginRegistriesBeanDefinitionRegistrar.getTargetType(PluginRegistriesBeanDefinitionRegistrar.java:101) ~[spring-plugin-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.plugin.core.config.PluginRegistriesBeanDefinitionRegistrar.registerBeanDefinitions(PluginRegistriesBeanDefinitionRegistrar.java:71) ~[spring-plugin-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.context.annotation.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:409) ~[spring-context-6.2.18.jar:6.2.18]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:408) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:430) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.18.jar:6.2.18]
 	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:792) ~[spring-context-6.2.18.jar:6.2.18]
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:610) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.14.jar:3.5.14]
 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.14.jar:3.5.14]
 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.14.jar:3.5.14]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.14.jar:3.5.14]
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:151) ~[spring-boot-test-3.5.14.jar:3.5.14]
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.2.18.jar:6.2.18]
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.2.18.jar:6.2.18]
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461) ~[spring-boot-3.5.14.jar:3.5.14]
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:590) ~[spring-boot-test-3.5.14.jar:3.5.14]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:151) ~[spring-boot-test-3.5.14.jar:3.5.14]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110) ~[spring-boot-test-3.5.14.jar:3.5.14]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.2.18.jar:6.2.18]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.2.18.jar:6.2.18]
-	... 78 common frames omitted
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.14.jar:3.5.14]
+	at com.bite.forum.ForumApplication.main(ForumApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.14.jar:3.5.14]
+Caused by: java.lang.ClassNotFoundException: javax.servlet.http.HttpServletRequest
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 37 common frames omitted
 
-2026-05-24 22:21:15  INFO 53312 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Starting ForumApplicationTests using Java 17.0.9 with PID 53312 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
-2026-05-24 22:21:15 DEBUG 53312 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-05-24 22:21:15  INFO 53312 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2026-05-24 22:21:17  INFO 53312 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Started ForumApplicationTests in 2.135 seconds (process running for 2.918)
-2026-05-24 22:21:18  INFO 53312 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-24 22:21:18  INFO 53312 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70aa58e1
-2026-05-24 22:21:18  INFO 53312 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-24 22:21:18 DEBUG 53312 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where id = ?
-2026-05-24 22:21:18 DEBUG 53312 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
-2026-05-24 22:21:18 DEBUG 53312 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2026-05-24 22:21:18  INFO 53312 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-24 22:21:18  INFO 53312 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-24 22:22:01  INFO 35516 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Starting ForumApplicationTests using Java 17.0.9 with PID 35516 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
-2026-05-24 22:22:01 DEBUG 35516 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-05-24 22:22:01  INFO 35516 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2026-05-24 22:22:03  INFO 35516 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Started ForumApplicationTests in 2.101 seconds (process running for 2.874)
-2026-05-24 22:22:04  INFO 35516 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-24 22:22:04  INFO 35516 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41ec4271
-2026-05-24 22:22:04  INFO 35516 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-24 22:22:04 DEBUG 35516 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where id = ?
-2026-05-24 22:22:04 DEBUG 35516 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
-2026-05-24 22:22:04 DEBUG 35516 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2026-05-24 22:22:04  INFO 35516 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-24 22:22:04  INFO 35516 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-24 22:22:14  INFO 41900 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Starting ForumApplicationTests using Java 17.0.9 with PID 41900 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
-2026-05-24 22:22:14 DEBUG 41900 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-05-24 22:22:14  INFO 41900 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2026-05-24 22:22:15  INFO 41900 --- [论坛系统] [main] com.bite.forum.ForumApplicationTests     : Started ForumApplicationTests in 1.939 seconds (process running for 2.702)
-2026-05-24 22:22:16  INFO 41900 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-24 22:22:16  INFO 41900 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@154f8280
-2026-05-24 22:22:16  INFO 41900 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-24 22:22:16 DEBUG 41900 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where id = ?
-2026-05-24 22:22:16 DEBUG 41900 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
-2026-05-24 22:22:16 DEBUG 41900 --- [论坛系统] [main] c.b.f.dao.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2026-05-24 22:22:16  INFO 41900 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-24 22:22:16  INFO 41900 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-25 22:27:09  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 28520 (D:\��ĿѧϰJava\��̳ϵͳ\forum\forum\target\classes started by liangyuanzhang in D:\��ĿѧϰJava\��̳ϵͳ\forum\forum)
+2026-05-25 22:27:09 DEBUG 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:27:09  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:27:09  INFO 28520 --- [��̳ϵͳ] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-25 22:27:09  INFO 28520 --- [��̳ϵͳ] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-25 22:27:10  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:27:10  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:27:10  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:27:10  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:27:10  INFO 28520 --- [��̳ϵͳ] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 809 ms
+2026-05-25 22:27:10  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-25 22:27:11  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 22:27:11  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:27:11  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 22:27:11  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 1.734 seconds (process running for 1.949)
+2026-05-25 22:27:29  INFO 28520 --- [��̳ϵͳ] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 19 class path changes (0 additions, 18 deletions, 1 modification)
+2026-05-25 22:27:29  INFO 28520 --- [��̳ϵͳ] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 22:27:29  INFO 28520 --- [��̳ϵͳ] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 22:27:29  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 28520 (D:\��ĿѧϰJava\��̳ϵͳ\forum\forum\target\classes started by liangyuanzhang in D:\��ĿѧϰJava\��̳ϵͳ\forum\forum)
+2026-05-25 22:27:29 DEBUG 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:27:29  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:27:29  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:27:29  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:27:29  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:27:30  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:27:30  INFO 28520 --- [��̳ϵͳ] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 228 ms
+2026-05-25 22:27:30  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-25 22:27:30  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 22:27:30  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:27:30  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 22:27:30  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.412 seconds (process running for 21.006)
+2026-05-25 22:27:30  INFO 28520 --- [��̳ϵͳ] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-25 22:27:30  INFO 3532 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 3532 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 22:27:30 DEBUG 3532 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:27:30  INFO 3532 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:27:30  INFO 3532 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-25 22:27:30  INFO 3532 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-25 22:27:31  INFO 3532 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:27:31  INFO 3532 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:27:31  INFO 3532 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:27:31  INFO 3532 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:27:31  INFO 3532 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 938 ms
+2026-05-25 22:27:31  INFO 28520 --- [��̳ϵͳ] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 18 class path changes (18 additions, 0 deletions, 0 modifications)
+2026-05-25 22:27:31  INFO 28520 --- [��̳ϵͳ] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 22:27:31  INFO 28520 --- [��̳ϵͳ] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 22:27:31  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 28520 (D:\��ĿѧϰJava\��̳ϵͳ\forum\forum\target\classes started by liangyuanzhang in D:\��ĿѧϰJava\��̳ϵͳ\forum\forum)
+2026-05-25 22:27:31 DEBUG 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:27:31  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:27:31  INFO 3532 --- [论坛系统] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-25 22:27:31  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:27:31  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:27:31  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:27:31  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:27:31  INFO 28520 --- [��̳ϵͳ] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 173 ms
+2026-05-25 22:27:31  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-25 22:27:31  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 22:27:31  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:27:32  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 22:27:32  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.334 seconds (process running for 22.846)
+2026-05-25 22:27:32  INFO 28520 --- [��̳ϵͳ] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-25 22:27:32  WARN 3532 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-05-25 22:27:32  INFO 3532 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:27:32  WARN 3532 --- [论坛系统] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-25 22:27:32  INFO 3532 --- [论坛系统] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-25 22:27:32 ERROR 3532 --- [论坛系统] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 58080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 58080 or configure this application to listen on another port.
+
+2026-05-25 22:27:38  INFO 28520 --- [��̳ϵͳ] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 25 class path changes (0 additions, 25 deletions, 0 modifications)
+2026-05-25 22:27:38  INFO 28520 --- [��̳ϵͳ] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 22:27:38  INFO 28520 --- [��̳ϵͳ] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 22:27:42  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 28520 (D:\��ĿѧϰJava\��̳ϵͳ\forum\forum\target\classes started by liangyuanzhang in D:\��ĿѧϰJava\��̳ϵͳ\forum\forum)
+2026-05-25 22:27:42 DEBUG 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:27:42  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:27:42  WARN 28520 --- [��̳ϵͳ] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bite.forum]' package. Please check your configuration.
+2026-05-25 22:27:42  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:27:42  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:27:42  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:27:42  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:27:42  INFO 28520 --- [��̳ϵͳ] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 210 ms
+2026-05-25 22:27:42  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-25 22:27:42  WARN 28520 --- [��̳ϵͳ] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\��ĿѧϰJava\��̳ϵͳ\forum\forum\target\classes\mapper\ArticleMapper.xml]'
+2026-05-25 22:27:42  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-25 22:27:42  INFO 28520 --- [��̳ϵͳ] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-25 22:27:42 ERROR 28520 --- [��̳ϵͳ] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\��ĿѧϰJava\��̳ϵͳ\forum\forum\target\classes\mapper\ArticleMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.14.jar:3.5.14]
+	at com.bite.forum.ForumApplication.main(ForumApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.14.jar:3.5.14]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\��ĿѧϰJava\��̳ϵͳ\forum\forum\target\classes\mapper\ArticleMapper.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:200) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:89) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:169) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.18.jar:6.2.18]
+	... 26 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [D:\��ĿѧϰJava\��̳ϵͳ\forum\forum\target\classes\mapper\ArticleMapper.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:700) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:577) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:720) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:189) ~[mybatis-spring-boot-autoconfigure-3.0.3.jar:3.0.3]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:172) ~[spring-beans-6.2.18.jar:6.2.18]
+	... 29 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\��ĿѧϰJava\��̳ϵͳ\forum\forum\target\classes\mapper\ArticleMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.bite.forum.model.Article'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.bite.forum.model.Article
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:127) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:100) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:698) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	... 37 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.bite.forum.model.Article'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.bite.forum.model.Article
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:103) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:269) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:261) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:253) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123) ~[mybatis-3.5.14.jar:3.5.14]
+	... 39 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.bite.forum.model.Article'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.bite.forum.model.Article
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:128) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:132) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:101) ~[mybatis-3.5.14.jar:3.5.14]
+	... 43 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.bite.forum.model.Article
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:226) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:103) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:322) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:124) ~[mybatis-3.5.14.jar:3.5.14]
+	... 45 common frames omitted
+
+2026-05-25 22:27:43  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 28520 (D:\��ĿѧϰJava\��̳ϵͳ\forum\forum\target\classes started by liangyuanzhang in D:\��ĿѧϰJava\��̳ϵͳ\forum\forum)
+2026-05-25 22:27:43 DEBUG 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:27:43  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:27:44  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:27:44  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:27:44  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:27:44  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:27:44  INFO 28520 --- [��̳ϵͳ] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 200 ms
+2026-05-25 22:27:44  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-25 22:27:44  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 22:27:44  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:27:44  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 22:27:44  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.352 seconds (process running for 35.154)
+2026-05-25 22:27:44  INFO 28520 --- [��̳ϵͳ] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-25 22:28:19  INFO 28520 --- [��̳ϵͳ] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 25 class path changes (0 additions, 25 deletions, 0 modifications)
+2026-05-25 22:28:19  INFO 28520 --- [��̳ϵͳ] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 22:28:19  INFO 28520 --- [��̳ϵͳ] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 22:28:23  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 28520 (D:\��ĿѧϰJava\��̳ϵͳ\forum\forum\target\classes started by liangyuanzhang in D:\��ĿѧϰJava\��̳ϵͳ\forum\forum)
+2026-05-25 22:28:23 DEBUG 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:28:23  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:28:23  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:28:23  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:28:23  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:28:23  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:28:23  INFO 28520 --- [��̳ϵͳ] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 231 ms
+2026-05-25 22:28:23  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-25 22:28:24  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 22:28:24  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:28:24  INFO 28520 --- [��̳ϵͳ] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 22:28:24  INFO 28520 --- [��̳ϵͳ] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.426 seconds (process running for 74.889)
+2026-05-25 22:28:24  INFO 28520 --- [��̳ϵͳ] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-25 22:28:47  INFO 29420 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 29420 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 22:28:47 DEBUG 29420 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:28:47  INFO 29420 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:28:47  INFO 29420 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-25 22:28:47  INFO 29420 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-25 22:28:48  INFO 29420 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:28:48  INFO 29420 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:28:48  INFO 29420 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:28:48  INFO 29420 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:28:48  INFO 29420 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 893 ms
+2026-05-25 22:28:48  INFO 29420 --- [论坛系统] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-25 22:28:49  WARN 29420 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-05-25 22:28:49  INFO 29420 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:28:49  WARN 29420 --- [论坛系统] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-25 22:28:49  INFO 29420 --- [论坛系统] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-25 22:28:49 ERROR 29420 --- [论坛系统] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 58080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 58080 or configure this application to listen on another port.
+
+2026-05-25 22:29:41  INFO 30680 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 30680 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 22:29:41 DEBUG 30680 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:29:41  INFO 30680 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:29:41  INFO 30680 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-25 22:29:41  INFO 30680 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-25 22:29:42  INFO 30680 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:29:42  INFO 30680 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:29:42  INFO 30680 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:29:42  INFO 30680 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:29:42  INFO 30680 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 830 ms
+2026-05-25 22:29:42  INFO 30680 --- [论坛系统] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-25 22:29:43  INFO 30680 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 22:29:43  INFO 30680 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:29:43  INFO 30680 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 22:29:43  INFO 30680 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 1.772 seconds (process running for 2.095)
+2026-05-25 22:29:43  INFO 30680 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-25 22:29:43  INFO 30680 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-25 22:29:43  INFO 30680 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-25 22:29:43  INFO 30680 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-25 22:29:44  INFO 30680 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5cbe6458
+2026-05-25 22:29:44  INFO 30680 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-25 22:31:20  INFO 30680 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-25 22:31:20  INFO 30680 --- [论坛系统] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 22:31:20  INFO 30680 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 22:31:20  INFO 30680 --- [论坛系统] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-25 22:31:20  INFO 30680 --- [论坛系统] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-25 22:31:20  INFO 30680 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 30680 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 22:31:20 DEBUG 30680 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:31:20  INFO 30680 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:31:21  INFO 30680 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:31:21  INFO 30680 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:31:21  INFO 30680 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:31:21  INFO 30680 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:31:21  INFO 30680 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 244 ms
+2026-05-25 22:31:21  INFO 30680 --- [论坛系统] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-25 22:31:21  INFO 30680 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 22:31:21  INFO 30680 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:31:21  INFO 30680 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 22:31:21  INFO 30680 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.434 seconds (process running for 100.073)
+2026-05-25 22:31:21  INFO 30680 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-25 22:32:59  INFO 30680 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 22:32:59  INFO 30680 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 22:33:28  INFO 27148 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 27148 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 22:33:28 DEBUG 27148 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:33:28  INFO 27148 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:33:28  INFO 27148 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-25 22:33:28  INFO 27148 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-25 22:33:29  INFO 27148 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:33:29  INFO 27148 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:33:29  INFO 27148 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:33:29  INFO 27148 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:33:29  INFO 27148 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 782 ms
+2026-05-25 22:33:29  INFO 27148 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 22:33:29  INFO 27148 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:33:29  INFO 27148 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 22:33:29  INFO 27148 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 1.66 seconds (process running for 1.992)
+2026-05-25 22:33:30  INFO 27148 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-25 22:33:30  INFO 27148 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-25 22:33:30  INFO 27148 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-25 22:33:30  INFO 27148 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-25 22:33:30  INFO 27148 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e8f333a
+2026-05-25 22:33:30  INFO 27148 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-25 22:38:36  INFO 27148 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-25 22:38:36  INFO 27148 --- [论坛系统] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 22:38:36  INFO 27148 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 22:38:36  INFO 27148 --- [论坛系统] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-25 22:38:36  INFO 27148 --- [论坛系统] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-25 22:38:37  INFO 27148 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 27148 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 22:38:37 DEBUG 27148 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:38:37  INFO 27148 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:38:37  INFO 27148 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:38:37  INFO 27148 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:38:37  INFO 27148 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:38:37  INFO 27148 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:38:37  INFO 27148 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 191 ms
+2026-05-25 22:38:37  INFO 27148 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 22:38:37  INFO 27148 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:38:37  INFO 27148 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 22:38:37  INFO 27148 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.356 seconds (process running for 309.518)
+2026-05-25 22:38:37  INFO 27148 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-25 22:39:27  INFO 27148 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-25 22:39:27  INFO 27148 --- [论坛系统] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 22:39:27  INFO 27148 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 22:39:27  INFO 27148 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 27148 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 22:39:27 DEBUG 27148 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:39:27  INFO 27148 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:39:27  INFO 27148 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:39:27  INFO 27148 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:39:27  INFO 27148 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:39:27  INFO 27148 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:39:27  INFO 27148 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 247 ms
+2026-05-25 22:39:27  INFO 27148 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 22:39:27  INFO 27148 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:39:27  INFO 27148 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 22:39:27  INFO 27148 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.459 seconds (process running for 359.995)
+2026-05-25 22:39:27  INFO 27148 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-25 22:39:29  INFO 27148 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-05-25 22:39:29  INFO 27148 --- [论坛系统] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 22:39:29  INFO 27148 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 22:39:29  INFO 27148 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 27148 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 22:39:29 DEBUG 27148 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:39:29  INFO 27148 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:39:29  INFO 27148 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:39:29  INFO 27148 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:39:29  INFO 27148 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:39:29  INFO 27148 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:39:29  INFO 27148 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 167 ms
+2026-05-25 22:39:29  INFO 27148 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 22:39:29  INFO 27148 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:39:29  INFO 27148 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 22:39:29  INFO 27148 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.324 seconds (process running for 361.805)
+2026-05-25 22:39:29  INFO 27148 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-25 22:41:14  INFO 27148 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 22:41:14  INFO 27148 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 22:41:17  INFO 15528 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 15528 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 22:41:17 DEBUG 15528 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:41:17  INFO 15528 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:41:17  INFO 15528 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-25 22:41:17  INFO 15528 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-25 22:41:18  INFO 15528 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:41:18  INFO 15528 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:41:18  INFO 15528 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:41:18  INFO 15528 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:41:18  INFO 15528 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 867 ms
+2026-05-25 22:41:19  INFO 15528 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 22:41:19  INFO 15528 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:41:19  INFO 15528 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 22:41:19  INFO 15528 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 1.845 seconds (process running for 2.208)
+2026-05-25 22:41:19  INFO 15528 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-25 22:41:19  INFO 15528 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-25 22:41:19  INFO 15528 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-25 22:41:19  INFO 15528 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-25 22:41:19  INFO 15528 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@318c0883
+2026-05-25 22:41:19  INFO 15528 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 15528 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 22:42:21 DEBUG 15528 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 211 ms
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.385 seconds (process running for 64.761)
+2026-05-25 22:42:21  INFO 15528 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-25 22:42:23  INFO 15528 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-05-25 22:42:23  INFO 15528 --- [论坛系统] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 22:42:23  INFO 15528 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 22:42:23  INFO 15528 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 15528 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 22:42:23 DEBUG 15528 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:42:23  INFO 15528 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:42:23  INFO 15528 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:42:23  INFO 15528 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:42:23  INFO 15528 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:42:23  INFO 15528 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:42:23  INFO 15528 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 168 ms
+2026-05-25 22:42:23  INFO 15528 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 22:42:23  INFO 15528 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:42:23  INFO 15528 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 22:42:23  INFO 15528 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.322 seconds (process running for 66.567)
+2026-05-25 22:42:23  INFO 15528 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-25 22:42:42  INFO 15528 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 22:42:42  INFO 15528 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 22:42:44  INFO 29084 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 29084 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 22:42:44 DEBUG 29084 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:42:44  INFO 29084 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:42:44  INFO 29084 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-25 22:42:44  INFO 29084 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-25 22:42:45  INFO 29084 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:42:45  INFO 29084 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:42:45  INFO 29084 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:42:45  INFO 29084 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:42:45  INFO 29084 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 866 ms
+2026-05-25 22:42:46  INFO 29084 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 22:42:46  INFO 29084 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:42:46  INFO 29084 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 22:42:46  INFO 29084 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 1.842 seconds (process running for 2.249)
+2026-05-25 22:42:46  INFO 29084 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-25 22:42:46  INFO 29084 --- [论坛系统] [RMI TCP Connection(4)-169.254.179.233] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-25 22:42:46  INFO 29084 --- [论坛系统] [RMI TCP Connection(4)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-25 22:42:46  INFO 29084 --- [论坛系统] [RMI TCP Connection(4)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-25 22:42:46  INFO 29084 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6dcbce74
+2026-05-25 22:42:46  INFO 29084 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-25 22:43:38 ERROR 29084 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.exception.GlobalExceptionHandler   : No static resource swagger-ui/index.html.
+2026-05-25 22:43:38  WARN 29084 --- [论坛系统] [http-nio-58080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui/index.html.]
+2026-05-25 22:43:38 ERROR 29084 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.exception.GlobalExceptionHandler   : No static resource favicon.ico.
+2026-05-25 22:43:38  WARN 29084 --- [论坛系统] [http-nio-58080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-05-25 22:43:52 ERROR 29084 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.exception.GlobalExceptionHandler   : No static resource swagger-ui/index.html.
+2026-05-25 22:43:52  WARN 29084 --- [论坛系统] [http-nio-58080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui/index.html.]
+2026-05-25 22:44:03  INFO 29084 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 22:44:03  INFO 29084 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 22:44:03  INFO 29084 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-25 22:44:03  INFO 29084 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-25 22:44:05  INFO 19252 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 19252 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 22:44:05 DEBUG 19252 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 22:44:05  INFO 19252 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 22:44:05  INFO 19252 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-25 22:44:05  INFO 19252 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-25 22:44:05  INFO 19252 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 22:44:05  INFO 19252 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 22:44:05  INFO 19252 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 22:44:05  INFO 19252 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 22:44:05  INFO 19252 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 805 ms
+2026-05-25 22:44:06  INFO 19252 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 22:44:06  INFO 19252 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 22:44:06  INFO 19252 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 22:44:06  INFO 19252 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 1.679 seconds (process running for 2.034)
+2026-05-25 22:44:06  INFO 19252 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-25 22:44:06  INFO 19252 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-25 22:44:06  INFO 19252 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-25 22:44:06  INFO 19252 --- [论坛系统] [RMI TCP Connection(4)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-25 22:44:06  INFO 19252 --- [论坛系统] [RMI TCP Connection(4)-169.254.179.233] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@676776bc
+2026-05-25 22:44:06  INFO 19252 --- [论坛系统] [RMI TCP Connection(4)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-25 22:44:12 ERROR 19252 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.exception.GlobalExceptionHandler   : No static resource swagger-ui/index.html.
+2026-05-25 22:44:12  WARN 19252 --- [论坛系统] [http-nio-58080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui/index.html.]
+2026-05-25 22:44:43  INFO 19252 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 22:44:43  INFO 19252 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 22:44:43  INFO 19252 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-25 22:44:43  INFO 19252 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-25 23:22:58  INFO 17824 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 17824 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 23:22:58 DEBUG 17824 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 23:22:58  INFO 17824 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 23:22:58  INFO 17824 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-25 23:22:58  INFO 17824 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-25 23:22:59  INFO 17824 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 23:22:59  INFO 17824 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 23:22:59  INFO 17824 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 23:22:59  INFO 17824 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 23:22:59  INFO 17824 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 815 ms
+2026-05-25 23:22:59  INFO 17824 --- [论坛系统] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-25 23:22:59  INFO 17824 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 23:22:59  INFO 17824 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 23:22:59  INFO 17824 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 23:22:59  INFO 17824 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 1.73 seconds (process running for 2.046)
+2026-05-25 23:22:59  INFO 17824 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-25 23:22:59  INFO 17824 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-25 23:22:59  INFO 17824 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-25 23:22:59  INFO 17824 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-25 23:23:00  INFO 17824 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17b50807
+2026-05-25 23:23:00  INFO 17824 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-25 23:23:04 ERROR 17824 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.exception.GlobalExceptionHandler   : Handler dispatch failed: java.lang.NoSuchMethodError: 'void org.springframework.web.method.ControllerAdviceBean.<init>(java.lang.Object)'
+2026-05-25 23:23:04  WARN 17824 --- [论坛系统] [http-nio-58080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [jakarta.servlet.ServletException: Handler dispatch failed: java.lang.NoSuchMethodError: 'void org.springframework.web.method.ControllerAdviceBean.<init>(java.lang.Object)']
+2026-05-25 23:23:11 ERROR 17824 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.exception.GlobalExceptionHandler   : Handler dispatch failed: java.lang.NoSuchMethodError: 'void org.springframework.web.method.ControllerAdviceBean.<init>(java.lang.Object)'
+2026-05-25 23:23:11  WARN 17824 --- [论坛系统] [http-nio-58080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [jakarta.servlet.ServletException: Handler dispatch failed: java.lang.NoSuchMethodError: 'void org.springframework.web.method.ControllerAdviceBean.<init>(java.lang.Object)']
+2026-05-25 23:23:23 ERROR 17824 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.exception.GlobalExceptionHandler   : Handler dispatch failed: java.lang.NoSuchMethodError: 'void org.springframework.web.method.ControllerAdviceBean.<init>(java.lang.Object)'
+2026-05-25 23:23:23  WARN 17824 --- [论坛系统] [http-nio-58080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [jakarta.servlet.ServletException: Handler dispatch failed: java.lang.NoSuchMethodError: 'void org.springframework.web.method.ControllerAdviceBean.<init>(java.lang.Object)']
+2026-05-25 23:24:20  INFO 17824 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 23:24:20  INFO 17824 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 23:24:20  INFO 17824 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-25 23:24:20  INFO 17824 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-25 23:24:41  INFO 28636 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 28636 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-25 23:24:41 DEBUG 28636 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-25 23:24:41  INFO 28636 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-25 23:24:41  INFO 28636 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-25 23:24:41  INFO 28636 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-25 23:24:42  INFO 28636 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-25 23:24:42  INFO 28636 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25 23:24:42  INFO 28636 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-25 23:24:42  INFO 28636 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25 23:24:42  INFO 28636 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 866 ms
+2026-05-25 23:24:42  INFO 28636 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25 23:24:42  INFO 28636 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-25 23:24:42  INFO 28636 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-25 23:24:42  INFO 28636 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 1.808 seconds (process running for 2.183)
+2026-05-25 23:24:43  INFO 28636 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-25 23:24:43  INFO 28636 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-25 23:24:43  INFO 28636 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-25 23:24:43  INFO 28636 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-25 23:24:43  INFO 28636 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ec6b75e
+2026-05-25 23:24:43  INFO 28636 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-25 23:24:48  INFO 28636 --- [论坛系统] [http-nio-58080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 114 ms
+2026-05-25 23:25:12  INFO 28636 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-25 23:25:12  INFO 28636 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-25 23:25:12  INFO 28636 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-25 23:25:12  INFO 28636 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
