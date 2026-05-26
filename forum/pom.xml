@@ -34,6 +34,13 @@
 
     <dependencies>
 
+        <!-- 编码解码加密⼯具包-->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+        </dependency>
+
+
         <!-- API文档生成，基于SpringDoc OpenAPI -->
         <dependency>
             <groupId>org.springdoc</groupId>
