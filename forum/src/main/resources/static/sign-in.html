@@ -113,9 +113,41 @@
         }
 
         // 构造数据
+        let postData = {
+          username: usernameEl.val(),
+          password: passwordEl.val()
+        };
+        
         
         // 发送AJAX请求，成功后跳转到index.html
         $.ajax({
+          url: 'user/login',
+          type: 'POST',
+          data: postData,
+          contentType: 'application/x-www-form-urlencoded',
+          success: function (respData) {
+            if (respData.code == 0) {
+              // 登录成功
+              // 跳转到index.html
+              location.assign('/index.html');
+            } else {
+              // 登录失败
+              // 提示错误信息
+              $.toast({
+                heading: '警告',
+                text: respData.message,
+                icon: 'warning'
+              });
+            }
+          },
+          error: function () {
+            // 提示错误信息
+            $.toast({
+              heading: '错误',
+              text: '发生错误，请稍后再试',
+              icon: 'error'
+            });
+          },
           
         });
       });
