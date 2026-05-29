@@ -2,13 +2,17 @@ package com.bite.forum.controller;
 
 import com.bite.forum.common.AppResult;
 import com.bite.forum.common.ResultCode;
+import com.bite.forum.config.AppConfig;
 import com.bite.forum.model.User;
 import com.bite.forum.service.IUserService;
 import com.bite.forum.util.MD5Utils;
 import com.bite.forum.util.StringUtils;
 import com.bite.forum.util.UUIDUtils;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -64,4 +68,30 @@ public class UserController {
         // 4. 返回
         return AppResult.success();
     }
+
+    /*
+    * 处理用户登录
+     */
+    @Operation(summary = "处理用户登录")
+    @PostMapping("/login")
+    public AppResult login(HttpServletRequest request, String username, String password) {
+        //1. 调用Service中的登录方法，返回User对象
+        User user = userService.login(username, password);
+        if (user == null) {
+            //打印日志
+            log.warn(ResultCode.FAILED_LOGIN.toString());
+            //返回结果
+            return AppResult.failed(ResultCode.FAILED_LOGIN);
+        }
+        //2. 如果登录成功把User对象设置到Session作用域中
+        HttpSession session = request.getSession(true);
+        session.setAttribute(AppConfig.USER_SESSION, user);
+        //3. 返回结果
+        return AppResult.success();
+    }
+
+
+
+
+
 }

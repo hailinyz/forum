@@ -6,6 +6,7 @@ import com.bite.forum.dao.UserMapper;
 import com.bite.forum.exception.ApplicationException;
 import com.bite.forum.model.User;
 import com.bite.forum.service.IUserService;
+import com.bite.forum.util.MD5Utils;
 import com.bite.forum.util.StringUtils;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -70,7 +71,58 @@ public class UserServiceImpl implements IUserService { // 实现类 implements�
 
     }
 
+    /*
+    * 根据用户名查询用户信息
+     */
+    @Override
+    public User selectByUserName(String username) {
+        //非空校验
+        if (StringUtils.isEmpty(username)) {
+            //打印日志
+            log.warn(ResultCode.FAILED_PARAMS_VALIDATE.toString());
+            //抛出异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_PARAMS_VALIDATE));
+        }
+        //返回查询结果
+        return userMapper.selectByUserName(username);
+    }
 
+    /*
+    * 处理用户登录
+     */
+    @Override
+    public User login(String username, String password) {
+        //1. 非空校验
+        if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password)) {
+            //打印日志
+            log.warn(ResultCode.FAILED_LOGIN.toString());
+            //抛出异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_LOGIN));
+        }
+
+        //2. 根据用户名查询用户信息
+        User user = selectByUserName(username);
+
+        //3. 对查询结果做非空校验
+        if (user == null) {
+            //打印日志
+            log.warn(ResultCode.FAILED_LOGIN.toString() + "username = " + username);
+            //抛出异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_LOGIN));
+        }
+
+        //4. 处理密码 - 使用工具类的验证方法
+        if (!MD5Utils.verifyOriginalAndCiphertext(password, user.getSalt(), user.getPassword())) {
+            //打印日志
+            log.warn(ResultCode.FAILED_LOGIN.toString() + "密码错误，username = " + username);
+            //抛出异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_LOGIN));
+        }
+        //打印登录成功的日志
+        log.info("用户登录成功. username = " + username);
+        //登录成功，返回用户信息
+        return user;
+    }
 
 
 

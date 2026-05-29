@@ -14,5 +14,15 @@ public interface IUserService {
      */
     void createNormalUser(User user);
 
+    /*
+    * 根据用户名查询用户信息
+     */
+    User selectByUserName(String username);
+
+    /*
+    处理用户登录
+     */
+    User login(String username, String password);
+
 
 }

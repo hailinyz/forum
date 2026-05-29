@@ -6,6 +6,7 @@ import com.bite.forum.util.UUIDUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -15,6 +16,7 @@ class UserServiceImplTest {
     @Autowired
     private UserServiceImpl userService;
 
+    @Transactional // 开启事务
     @Test
     void createNormalUser() {
         //构建User对象
@@ -39,5 +41,15 @@ class UserServiceImplTest {
     }
 
 
+    @Test
+    void selectByUserName() {
+        User user = userService.selectByUserName("test");
+        System.out.println(user);
+    }
 
+    @Test
+    void login() {
+        User user = userService.login("test", "123456");
+        System.out.println(user);
+    }
 }
