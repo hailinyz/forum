@@ -14,6 +14,7 @@ import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -94,7 +95,7 @@ public class UserController {
     * 获取用户信息
      */
     @Operation(summary = "获取用户信息")
-    @PostMapping("/info")
+    @GetMapping("/info")
     public AppResult< User> getUserInfo(HttpServletRequest request, Long id) {
         User user = null;
         //根据id的值判断User对象的获取方式

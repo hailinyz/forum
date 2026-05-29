@@ -2241,3 +2241,228 @@ Consider defining a bean of type 'com.bite.forum.service.IUserService' in your c
 2026-05-29 14:39:07 DEBUG 13872 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
 2026-05-29 14:39:07 DEBUG 13872 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
 2026-05-29 14:39:07  INFO 13872 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-29 15:04:23  INFO 13872 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-29 15:04:23  INFO 13872 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-29 15:04:23  INFO 13872 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-05-29 15:04:23  INFO 13872 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-05-29 15:04:26  INFO 22856 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 22856 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-29 15:04:26 DEBUG 22856 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-29 15:04:26  INFO 22856 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-29 15:04:26  INFO 22856 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-29 15:04:26  INFO 22856 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-29 15:04:27  INFO 22856 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-29 15:04:27  INFO 22856 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-29 15:04:27  INFO 22856 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-29 15:04:27  INFO 22856 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-29 15:04:27  INFO 22856 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1078 ms
+2026-05-29 15:04:27  INFO 22856 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-29 15:04:28  INFO 22856 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-29 15:04:28  INFO 22856 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-29 15:04:28  INFO 22856 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-29 15:04:28  INFO 22856 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 2.294 seconds (process running for 2.688)
+2026-05-29 15:04:28  INFO 22856 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-29 15:04:28  INFO 22856 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-29 15:04:28  INFO 22856 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-29 15:04:28  INFO 22856 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-29 15:04:29  INFO 22856 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@694d1542
+2026-05-29 15:04:29  INFO 22856 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-29 15:05:02 DEBUG 22856 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-05-29 15:05:02 DEBUG 22856 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-05-29 15:05:02 DEBUG 22856 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-05-29 15:05:02  INFO 22856 --- [论坛系统] [http-nio-58080-exec-7] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-29 15:05:02 ERROR 22856 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.exception.GlobalExceptionHandler   : Request method 'GET' is not supported
+2026-05-29 15:05:02  WARN 22856 --- [论坛系统] [http-nio-58080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-05-29 15:09:28 DEBUG 22856 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-05-29 15:09:28 DEBUG 22856 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-05-29 15:09:28 DEBUG 22856 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-05-29 15:09:28  INFO 22856 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-29 15:09:28 ERROR 22856 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.exception.GlobalExceptionHandler   : Request method 'GET' is not supported
+2026-05-29 15:09:28  WARN 22856 --- [论坛系统] [http-nio-58080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-05-29 15:14:40 DEBUG 22856 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-05-29 15:14:40 DEBUG 22856 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-05-29 15:14:40 DEBUG 22856 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-05-29 15:14:40  INFO 22856 --- [论坛系统] [http-nio-58080-exec-2] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-29 15:14:40 ERROR 22856 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.exception.GlobalExceptionHandler   : Request method 'GET' is not supported
+2026-05-29 15:14:40  WARN 22856 --- [论坛系统] [http-nio-58080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-05-29 15:14:49 ERROR 22856 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.exception.GlobalExceptionHandler   : Request method 'GET' is not supported
+2026-05-29 15:14:49  WARN 22856 --- [论坛系统] [http-nio-58080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-05-29 15:14:52 ERROR 22856 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.exception.GlobalExceptionHandler   : Request method 'GET' is not supported
+2026-05-29 15:14:52  WARN 22856 --- [论坛系统] [http-nio-58080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-05-29 15:14:58  INFO 22856 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-29 15:14:58  INFO 22856 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-29 15:14:58  INFO 22856 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-29 15:14:58  INFO 22856 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-29 15:15:01  INFO 31756 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 31756 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-29 15:15:01 DEBUG 31756 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-29 15:15:01  INFO 31756 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-29 15:15:01  INFO 31756 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-29 15:15:01  INFO 31756 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-29 15:15:02  INFO 31756 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-29 15:15:02  INFO 31756 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-29 15:15:02  INFO 31756 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-29 15:15:02  INFO 31756 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-29 15:15:02  INFO 31756 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1342 ms
+2026-05-29 15:15:03  INFO 31756 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-29 15:15:03  INFO 31756 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-29 15:15:03  INFO 31756 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-29 15:15:03  INFO 31756 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-29 15:15:03  INFO 31756 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 2.746 seconds (process running for 4.202)
+2026-05-29 15:15:04  INFO 31756 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-29 15:15:04  INFO 31756 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-29 15:15:04  INFO 31756 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-29 15:15:04  INFO 31756 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-29 15:15:04  INFO 31756 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6394a4e8
+2026-05-29 15:15:04  INFO 31756 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-29 15:15:08 ERROR 31756 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.exception.GlobalExceptionHandler   : Request method 'GET' is not supported
+2026-05-29 15:15:08  WARN 31756 --- [论坛系统] [http-nio-58080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-05-29 15:15:11 ERROR 31756 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.exception.GlobalExceptionHandler   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-05-29 15:15:11  WARN 31756 --- [论坛系统] [http-nio-58080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-05-29 15:15:12 ERROR 31756 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.exception.GlobalExceptionHandler   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-05-29 15:15:12  WARN 31756 --- [论坛系统] [http-nio-58080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-05-29 15:15:12 ERROR 31756 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.exception.GlobalExceptionHandler   : Request method 'GET' is not supported
+2026-05-29 15:15:12  WARN 31756 --- [论坛系统] [http-nio-58080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-05-29 15:15:41  INFO 31756 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-29 15:15:41  INFO 31756 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-29 15:15:41  INFO 31756 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-29 15:15:41  INFO 31756 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-29 15:15:44  INFO 23200 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 23200 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-29 15:15:44 DEBUG 23200 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-29 15:15:44  INFO 23200 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-29 15:15:44  INFO 23200 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-29 15:15:44  INFO 23200 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-29 15:15:45  INFO 23200 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-29 15:15:45  INFO 23200 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-29 15:15:45  INFO 23200 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-29 15:15:45  INFO 23200 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-29 15:15:45  INFO 23200 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 984 ms
+2026-05-29 15:15:45  INFO 23200 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-29 15:15:46  INFO 23200 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-29 15:15:46  INFO 23200 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-29 15:15:46  INFO 23200 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-29 15:15:46  INFO 23200 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 2.096 seconds (process running for 2.463)
+2026-05-29 15:15:46  INFO 23200 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-29 15:15:46  INFO 23200 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-29 15:15:46  INFO 23200 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-29 15:15:46  INFO 23200 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-29 15:15:46  INFO 23200 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67b94f1c
+2026-05-29 15:15:46  INFO 23200 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-29 15:16:10  INFO 23200 --- [论坛系统] [http-nio-58080-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 156 ms
+2026-05-29 15:16:16 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where id = ?
+2026-05-29 15:16:16 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2026-05-29 15:16:16 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.dao.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2026-05-29 15:16:49 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-05-29 15:16:49 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-05-29 15:16:49 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-05-29 15:16:49  INFO 23200 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-29 15:17:22 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-05-29 15:17:22 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-05-29 15:17:22 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-05-29 15:17:22  INFO 23200 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-29 15:17:40 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-05-29 15:17:40 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-05-29 15:17:40 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-05-29 15:17:40  INFO 23200 --- [论坛系统] [http-nio-58080-exec-7] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-29 15:19:12 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-05-29 15:19:12 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-05-29 15:19:12 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-05-29 15:19:12  INFO 23200 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-29 15:19:13 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-05-29 15:19:13 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-05-29 15:19:13 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-05-29 15:19:13  INFO 23200 --- [论坛系统] [http-nio-58080-exec-2] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-29 15:19:15 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-05-29 15:19:15 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-05-29 15:19:15 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-05-29 15:19:15  INFO 23200 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-29 15:19:25 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where id = ?
+2026-05-29 15:19:25 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2026-05-29 15:19:25 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.dao.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2026-05-29 15:19:33 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where id = ?
+2026-05-29 15:19:33 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==> Parameters: 19(Long)
+2026-05-29 15:19:33 DEBUG 23200 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.dao.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2026-05-29 15:19:38  INFO 23200 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-29 15:19:38  INFO 23200 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-29 15:19:38  INFO 23200 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-29 15:19:38  INFO 23200 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-29 15:19:39  INFO 20908 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 20908 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-29 15:19:39 DEBUG 20908 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-29 15:19:39  INFO 20908 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-29 15:19:39  INFO 20908 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-29 15:19:39  INFO 20908 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-29 15:19:40  INFO 20908 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-29 15:19:40  INFO 20908 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-29 15:19:40  INFO 20908 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-29 15:19:40  INFO 20908 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-29 15:19:40  INFO 20908 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1010 ms
+2026-05-29 15:19:40  INFO 20908 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-29 15:19:41  INFO 20908 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-29 15:19:41  INFO 20908 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-29 15:19:41  INFO 20908 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-29 15:19:41  INFO 20908 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 2.113 seconds (process running for 2.557)
+2026-05-29 15:19:41  INFO 20908 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-29 15:19:41  INFO 20908 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-29 15:19:41  INFO 20908 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-29 15:19:41  INFO 20908 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-29 15:19:41  INFO 20908 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59aec805
+2026-05-29 15:19:41  INFO 20908 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-29 15:19:42 ERROR 20908 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.exception.GlobalExceptionHandler   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-05-29 15:19:42  WARN 20908 --- [论坛系统] [http-nio-58080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-05-29 15:19:43 ERROR 20908 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.exception.GlobalExceptionHandler   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-05-29 15:19:43  WARN 20908 --- [论坛系统] [http-nio-58080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-05-29 15:19:55 ERROR 20908 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.exception.GlobalExceptionHandler   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-05-29 15:19:55  WARN 20908 --- [论坛系统] [http-nio-58080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-05-29 15:20:18  INFO 20908 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-29 15:20:18  INFO 20908 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-29 15:20:18  INFO 20908 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-29 15:20:18  INFO 20908 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-29 15:20:20  INFO 35016 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 35016 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-29 15:20:20 DEBUG 35016 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-29 15:20:20  INFO 35016 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-29 15:20:20  INFO 35016 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-29 15:20:20  INFO 35016 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-29 15:20:21  INFO 35016 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-29 15:20:21  INFO 35016 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-29 15:20:21  INFO 35016 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-29 15:20:21  INFO 35016 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-29 15:20:21  INFO 35016 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 994 ms
+2026-05-29 15:20:21  INFO 35016 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-29 15:20:22  INFO 35016 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-29 15:20:22  INFO 35016 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-29 15:20:22  INFO 35016 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-29 15:20:22  INFO 35016 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 2.066 seconds (process running for 2.464)
+2026-05-29 15:20:22  INFO 35016 --- [论坛系统] [http-nio-58080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-29 15:20:22  INFO 35016 --- [论坛系统] [http-nio-58080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-29 15:20:22  INFO 35016 --- [论坛系统] [http-nio-58080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-29 15:20:22  INFO 35016 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-29 15:20:22  INFO 35016 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e2b077a
+2026-05-29 15:20:22  INFO 35016 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-29 15:20:38 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where id = ?
+2026-05-29 15:20:38 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==> Parameters: 19(Long)
+2026-05-29 15:20:38 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.dao.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2026-05-29 15:20:40 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where id = ?
+2026-05-29 15:20:40 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==> Parameters: 19(Long)
+2026-05-29 15:20:40 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.dao.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2026-05-29 15:20:41 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where id = ?
+2026-05-29 15:20:41 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==> Parameters: 19(Long)
+2026-05-29 15:20:41 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.dao.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2026-05-29 15:20:41 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where id = ?
+2026-05-29 15:20:41 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==> Parameters: 19(Long)
+2026-05-29 15:20:41 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.dao.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2026-05-29 15:20:41 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where id = ?
+2026-05-29 15:20:41 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==> Parameters: 19(Long)
+2026-05-29 15:20:41 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.dao.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2026-05-29 15:20:45 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where id = ?
+2026-05-29 15:20:45 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.dao.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2026-05-29 15:20:45 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.dao.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2026-05-29 15:20:57 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-05-29 15:20:57 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-05-29 15:20:57 DEBUG 35016 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-05-29 15:20:57  INFO 35016 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-29 15:21:02 ERROR 35016 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.exception.GlobalExceptionHandler   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-05-29 15:21:02  WARN 35016 --- [论坛系统] [http-nio-58080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-05-29 15:21:03 ERROR 35016 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.exception.GlobalExceptionHandler   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-05-29 15:21:03  WARN 35016 --- [论坛系统] [http-nio-58080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-05-29 15:23:22  INFO 35016 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-29 15:23:22  INFO 35016 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-29 15:23:22  INFO 35016 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-29 15:23:22  INFO 35016 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
