@@ -121,6 +121,26 @@ public class UserController {
         return AppResult.success(user);
     }
 
+    /*
+    * 退出登录
+     */
+    @Operation(summary = "退出登录")
+    @GetMapping("/logout")
+    public AppResult logout(HttpServletRequest request) {
+        //1. 获取Session对象
+        HttpSession session = request.getSession(false);
+        //2. 判断Session对象是否存在
+        if (session == null) {
+            //Session对象不存在，返回错误信息
+            return AppResult.failed(ResultCode.FAILED_FORBIDDEN);
+        }
+        //3. 删除Session对象
+        session.invalidate();
+        log.info("用户退出登录成功");
+        //4. 返回结果
+        return AppResult.success();
+    }
+
 
 
 
