@@ -1,5 +1,6 @@
 package com.bite.forum.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
@@ -14,6 +15,7 @@ public class User {
     @Schema(description = "用户名")
     private String username;
 
+    @JsonIgnore
     @Schema(description = "密码")
     private String password;
 
@@ -29,6 +31,7 @@ public class User {
     @Schema(description = "性别：0-女，1-男")
     private Byte gender;
 
+    @JsonIgnore //不参与JSON序列化
     @Schema(description = "密码盐值")
     private String salt;
 
@@ -47,6 +50,7 @@ public class User {
     @Schema(description = "状态：0-禁用，1-正常")
     private Byte state;
 
+    @JsonIgnore //不参与JSON序列化
     @Schema(description = "删除状态：0-未删除，1-已删除")
     private Byte deleteState;
 

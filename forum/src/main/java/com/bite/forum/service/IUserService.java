@@ -24,5 +24,10 @@ public interface IUserService {
      */
     User login(String username, String password);
 
+    /*
+    * 根据ID查询用户信息
+     */
+    User selectById(Long id);
+
 
 }

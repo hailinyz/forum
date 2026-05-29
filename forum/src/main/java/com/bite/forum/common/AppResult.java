@@ -1,12 +1,17 @@
 package com.bite.forum.common;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 public class AppResult<T> {
 
     // 状态码
+    @JsonInclude(JsonInclude.Include.ALWAYS) //不论任何情况都参与JSON序列化
     private int code;
     // 描述信息
+    @JsonInclude(JsonInclude.Include.ALWAYS) //不论任何情况都参与JSON序列化
     private String message;
     // 具体数据
+    @JsonInclude(JsonInclude.Include.ALWAYS) //不论任何情况都参与JSON序列化
     private T data;
 
     /*
