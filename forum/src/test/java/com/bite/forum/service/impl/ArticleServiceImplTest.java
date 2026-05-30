@@ -2,12 +2,15 @@ package com.bite.forum.service.impl;
 
 import com.bite.forum.model.Article;
 import com.bite.forum.service.IArticleService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.List;
+
 
 @SpringBootTest
 class ArticleServiceImplTest {
@@ -15,6 +18,8 @@ class ArticleServiceImplTest {
     @Resource
     private IArticleService articleService;
 
+    @Resource
+    private ObjectMapper objectMapper;
 
     @Transactional
     @Test
@@ -27,4 +32,14 @@ class ArticleServiceImplTest {
         articleService.create(article);
         System.out.println(article.getId());
     }
+
+    @Test
+    void selectAll() throws JsonProcessingException {
+        List<Article> articles = articleService.selectAll();
+        System.out.println(objectMapper.writeValueAsString(articles));
+    }
+
+
+
+
 }

@@ -15,10 +15,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.HttpRequestHandler;
-import org.springframework.web.bind.annotation.Mapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Tag(name = "文章相关接口类")
 @Slf4j
@@ -64,5 +64,36 @@ public class ArticleController {
         articleService.create(article);
         return AppResult.success();
     }
+
+
+    /*
+    * 获取板帖子列表
+     */
+    @Operation(summary = "获取板帖子列表")
+    @GetMapping("/getAllByBoardId")
+    public AppResult<List<Article>> getAllByBoardId(@RequestParam(required = false) Long boardId) {
+        //查询所有
+        List<Article> articles = articleService.selectAll();
+        //非空判断
+        if (articles == null) {
+            articles = new ArrayList<>();
+        }
+
+        //响应结果
+        return AppResult.success(articles);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

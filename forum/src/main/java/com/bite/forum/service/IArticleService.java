@@ -3,6 +3,8 @@ package com.bite.forum.service;
 import com.bite.forum.model.Article;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 public interface IArticleService {
 
     /*
@@ -10,5 +12,12 @@ public interface IArticleService {
      */
     @Transactional
     void create(Article article);
+
+    /*
+    查询所有帖子
+     */
+    List<Article> selectAll();
+
+
 
 }

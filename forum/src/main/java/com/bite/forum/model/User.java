@@ -1,6 +1,7 @@
 package com.bite.forum.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
@@ -36,6 +37,7 @@ public class User {
     private String salt;
 
     @Schema(description = "头像URL")
+    @JsonInclude(JsonInclude.Include.ALWAYS)
     private String avatarUrl;
 
     @Schema(description = "文章数量")

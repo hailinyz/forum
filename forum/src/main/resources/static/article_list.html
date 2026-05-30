@@ -93,8 +93,28 @@
     // ========================= 获取帖子列表 =======================
     // 成功后，调用listBuildArticleList()方法，构建帖子列表
     $.ajax({
-      
-
+      type : "get",
+      url : 'article/getAllByBoardId',
+      success : function(respData) {
+        if (respData.code == 0) {
+          listBuildArticleList(respData.data);
+        } else {
+          // 发布失败
+          // 提示错误信息
+          $.toast({
+            heading: '警告',
+            text: respData.message,
+            icon: 'warning'
+          });
+        }
+      },
+      error : function() {
+        $.toast({
+          heading: '错误',
+          text: '获取帖子列表失败',
+          icon: 'error'
+        });
+      }
     });
 
     // ========================= 构造帖子列表 =======================

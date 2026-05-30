@@ -19,7 +19,7 @@
           <label class="form-label"><strong>版块</strong></label>
           <select id="article_post_borad" type="text" class="form-select" placeholder="Select a date" id="select-tags"
             value="">
-            <option value="1" selected>JAVA</option>
+            <option value="1" selected>JAVA</option> 
             <option value="2">C++</option>
             <option value="3">前端技术</option>
             <option value="4">MySQL</option>
@@ -136,13 +136,14 @@
               text: respData.message,
               icon: 'success'
             });
-            // 跳转到index.html
+            // 跳转到index.html,并且做出跳转效果
             changeNavActive($('#nav_board_index'));
+            // location.assign('/index.html');
           } else {
             // 发布失败
             // 提示错误信息
             $.toast({
-              heading: '警告',
+              heading: '发帖失败',
               text: respData.message,
               icon: 'warning'
             });
