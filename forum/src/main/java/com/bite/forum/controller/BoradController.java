@@ -1,10 +1,13 @@
 package com.bite.forum.controller;
 
 import com.bite.forum.common.AppResult;
+import com.bite.forum.common.ResultCode;
+import com.bite.forum.exception.ApplicationException;
 import com.bite.forum.model.Board;
 import com.bite.forum.service.IBoradService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.annotation.Nonnull;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -42,6 +45,23 @@ public class BoradController {
         }
         //返回结果
         return AppResult.success(boards);
+    }
+
+    /*
+    获取板块信息
+     */
+    @Operation(summary = "获取板块信息")
+    @GetMapping("getById")
+    public AppResult<Board> getById(@Nonnull Long id) {
+        Board board = boardService.selectById(id);
+        //对查询结果进行校验
+        if (board == null || board.getDeleteState() == 1) {
+            //打印日志
+            log.warn(ResultCode.FAILED_BOARD_NOT_EXISTS.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_BOARD_NOT_EXISTS));
+        }
+        return AppResult.success(board);
     }
 
 

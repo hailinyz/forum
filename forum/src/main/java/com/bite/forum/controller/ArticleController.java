@@ -72,16 +72,23 @@ public class ArticleController {
     @Operation(summary = "获取板帖子列表")
     @GetMapping("/getAllByBoardId")
     public AppResult<List<Article>> getAllByBoardId(@RequestParam(required = false) Long boardId) {
-        //查询所有
-        List<Article> articles = articleService.selectAll();
+
+        List<Article> articles; //定义返回结果集
+
+        if (boardId == null) {
+            //查询所有
+             articles = articleService.selectAll();
+            } else {
+                articles = articleService.selectByBoardId(boardId);
+            }
         //非空判断
         if (articles == null) {
             articles = new ArrayList<>();
         }
-
         //响应结果
         return AppResult.success(articles);
     }
+
 
 
 

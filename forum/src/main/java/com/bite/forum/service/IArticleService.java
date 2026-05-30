@@ -18,6 +18,11 @@ public interface IArticleService {
      */
     List<Article> selectAll();
 
+    /*
+    查询指定板块帖子
+     */
+    List<Article> selectByBoardId(Long boardId);
+
 
 
 }

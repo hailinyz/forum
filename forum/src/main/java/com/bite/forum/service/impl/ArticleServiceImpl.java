@@ -99,5 +99,33 @@ public class ArticleServiceImpl implements IArticleService {
         return articles;
     }
 
+    /*
+    * 根据板块id查询帖子
+     */
+    @Override
+    public List<Article> selectByBoardId(Long boardId) {
+        //非空校验
+        if (boardId == null || boardId <= 0) {
+            //打印日志
+            log.warn(ResultCode.FAILED_PARAMS_VALIDATE.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_PARAMS_VALIDATE));
+        }
+        //校验板块是否存在
+        Board board = boradService.selectById(boardId);
+        if (board == null) {
+            //打印日志
+            log.warn(ResultCode.FAILED_BOARD_NOT_EXISTS.toString() + "board id = " + boardId);
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_BOARD_NOT_EXISTS));
+        }
+        //调用DAO、查询
+        List<Article> articles = articleMapper.selectAllByBoardId(boardId);
+        return articles;
+    }
+
+
+
+
 
 }

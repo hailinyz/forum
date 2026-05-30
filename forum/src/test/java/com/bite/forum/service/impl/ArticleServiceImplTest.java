@@ -40,6 +40,10 @@ class ArticleServiceImplTest {
     }
 
 
-
-
+    @Test
+    void selectByBoardId() throws JsonProcessingException {
+        List<Article> articles = articleService.selectByBoardId(1L);
+        //用json的方法打印
+        System.out.println(objectMapper.writeValueAsString(articles));
+    }
 }

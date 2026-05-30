@@ -8,6 +8,7 @@
           子标题
         </div> -->
         <h2 class="page-title" id="article_list_board_title">
+          <!-- 如果是板块，则显示板块名称，否则显示“首页” -->
           首页
         </h2>
         <!-- 帖子数量 -->
@@ -86,7 +87,32 @@
       }
       // 发送请求， 成功后，显示版块相关信息
       $.ajax({
-        
+        type : "get",
+        url : 'board/getById?id=' + boardId,
+        success : function(response) {
+          if (response.code == 0) {
+            $('#article_list_board_title').html(response.data.name); // 版块名称
+            // $('#article_list_count_board').show(); // 显示帖子数量
+            $('#article_list_count_board').html('帖子数量：' + response.data.articleCount); // 帖子数量
+          } else {
+            // 获取失败
+            // 提示错误信息
+            $.toast({
+              heading: '警告',
+              text: response.message,
+              icon: 'warning'
+            });
+          }
+        },
+        error: function () {
+          // 获取失败
+          // 提示错误信息
+          $.toast({
+            heading: '错误',
+            text: '获取版块信息失败',
+            icon: 'error'
+          });
+        }
       });
     }
 
@@ -94,7 +120,7 @@
     // 成功后，调用listBuildArticleList()方法，构建帖子列表
     $.ajax({
       type : "get",
-      url : 'article/getAllByBoardId',
+      url : 'article/getAllByBoardId' + queryString,
       success : function(respData) {
         if (respData.code == 0) {
           listBuildArticleList(respData.data);

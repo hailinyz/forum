@@ -4995,3 +4995,1165 @@ Caused by: java.lang.IllegalArgumentException: Mapped Statements collection alre
 2026-05-30 19:16:52  INFO 39324 --- [论坛系统] [RMI TCP Connection(5)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2026-05-30 19:16:52  INFO 39324 --- [论坛系统] [RMI TCP Connection(5)-169.254.179.233] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ea20804
 2026-05-30 19:16:52  INFO 39324 --- [论坛系统] [RMI TCP Connection(5)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-30 19:17:57 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-05-30 19:17:57 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-05-30 19:17:57 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-05-30 19:17:57  INFO 39324 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-30 19:17:57 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.BoardMapper.selectByNum    : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where deleteState = 0 and state = 0 order by sort asc limit ?
+2026-05-30 19:17:57 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.BoardMapper.selectByNum    : ==> Parameters: 9(Integer)
+2026-05-30 19:17:57 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.BoardMapper.selectByNum    : <==      Total: 9
+2026-05-30 19:17:57 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 19:17:57 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 19:17:57 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 19:18:17 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-2] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 19:18:17 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-2] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 19:18:17 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-2] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 19:18:18 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 19:18:18 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 19:18:18 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 19:55:43  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-30 19:55:43  INFO 39324 --- [论坛系统] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 19:55:43  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 19:55:43  INFO 39324 --- [论坛系统] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-30 19:55:43  INFO 39324 --- [论坛系统] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-30 19:55:43  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 19:55:43 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 19:55:43  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 19:55:43  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 19:55:43  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 19:55:43  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 19:55:43  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-30 19:55:43  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 252 ms
+2026-05-30 19:55:43  WARN 39324 --- [论坛系统] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleController': Injection of resource dependencies failed
+2026-05-30 19:55:43  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-30 19:55:43  INFO 39324 --- [论坛系统] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-30 19:55:43 ERROR 39324 --- [论坛系统] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleController': Injection of resource dependencies failed
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:372) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.14.jar:3.5.14]
+	at com.bite.forum.ForumApplication.main(ForumApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.14.jar:3.5.14]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleServiceImpl': Injection of resource dependencies failed
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:372) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1770) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:598) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:576) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:738) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:272) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:369) ~[spring-context-6.2.18.jar:6.2.18]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleMapper' defined in file [D:\项目学习Java\论坛系统\forum\forum\target\classes\com\bite\forum\dao\ArticleMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory': Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml]'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1556) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1450) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:605) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:576) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:738) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:272) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:369) ~[spring-context-6.2.18.jar:6.2.18]
+	... 40 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1770) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1541) ~[spring-beans-6.2.18.jar:6.2.18]
+	... 54 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:200) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:89) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:169) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.18.jar:6.2.18]
+	... 67 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:700) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:577) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:720) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:189) ~[mybatis-spring-boot-autoconfigure-3.0.3.jar:3.0.3]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:172) ~[spring-beans-6.2.18.jar:6.2.18]
+	... 70 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains key com.bite.forum.dao.ArticleMapper.selectAll. please check file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml] and file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:127) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:100) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:698) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	... 78 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains key com.bite.forum.dao.ArticleMapper.selectAll. please check file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml] and file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml]
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1071) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1024) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:822) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:223) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:120) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:143) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:135) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:125) ~[mybatis-3.5.14.jar:3.5.14]
+	... 80 common frames omitted
+
+2026-05-30 19:56:05  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 19:56:05 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 19:56:05  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 19:56:05  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 19:56:05  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 19:56:05  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 19:56:05  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 19:56:05  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 228 ms
+2026-05-30 19:56:05  WARN 39324 --- [论坛系统] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleController': Injection of resource dependencies failed
+2026-05-30 19:56:05  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-30 19:56:05  INFO 39324 --- [论坛系统] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-30 19:56:05 ERROR 39324 --- [论坛系统] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleController': Injection of resource dependencies failed
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:372) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.14.jar:3.5.14]
+	at com.bite.forum.ForumApplication.main(ForumApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.14.jar:3.5.14]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleServiceImpl': Injection of resource dependencies failed
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:372) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1770) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:598) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:576) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:738) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:272) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:369) ~[spring-context-6.2.18.jar:6.2.18]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleMapper' defined in file [D:\项目学习Java\论坛系统\forum\forum\target\classes\com\bite\forum\dao\ArticleMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory': Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml]'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1556) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1450) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:605) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:576) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:738) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:272) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:369) ~[spring-context-6.2.18.jar:6.2.18]
+	... 40 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1770) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1541) ~[spring-beans-6.2.18.jar:6.2.18]
+	... 54 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:200) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:89) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:169) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.18.jar:6.2.18]
+	... 67 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:700) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:577) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:720) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:189) ~[mybatis-spring-boot-autoconfigure-3.0.3.jar:3.0.3]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:172) ~[spring-beans-6.2.18.jar:6.2.18]
+	... 70 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains key com.bite.forum.dao.ArticleMapper.selectAll. please check file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml] and file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:127) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:100) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:698) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	... 78 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains key com.bite.forum.dao.ArticleMapper.selectAll. please check file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml] and file [D:\项目学习Java\论坛系统\forum\forum\target\classes\mapper\extension\ArticleExtMapper.xml]
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1071) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1024) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:822) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:223) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:120) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:143) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:135) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:125) ~[mybatis-3.5.14.jar:3.5.14]
+	... 80 common frames omitted
+
+2026-05-30 19:56:28  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 19:56:28 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 19:56:28  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 19:56:28  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 19:56:28  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 19:56:28  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 19:56:28  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 19:56:28  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 231 ms
+2026-05-30 19:56:28  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 19:56:28  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 19:56:28  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 19:56:28  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 19:56:28  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.479 seconds (process running for 2379.78)
+2026-05-30 19:56:28  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 19:57:02  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-30 19:57:02  INFO 39324 --- [论坛系统] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 19:57:02  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 19:57:02  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 19:57:02 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 19:57:02  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 19:57:02  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 19:57:02  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 19:57:02  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 19:57:02  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 19:57:02  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 206 ms
+2026-05-30 19:57:03  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 19:57:03  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 19:57:03  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 19:57:03  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 19:57:03  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.41 seconds (process running for 2414.339)
+2026-05-30 19:57:03  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 19:57:49  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-30 19:57:49  INFO 39324 --- [论坛系统] [Thread-17] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 19:57:49  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 19:57:49  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 19:57:49 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 19:57:49  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 19:57:50  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 19:57:50  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 19:57:50  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 19:57:50  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 19:57:50  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 230 ms
+2026-05-30 19:57:50  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 19:57:50  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 19:57:50  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 19:57:50  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 19:57:50  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.484 seconds (process running for 2461.498)
+2026-05-30 19:57:50  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 19:57:51  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-05-30 19:57:51  INFO 39324 --- [论坛系统] [Thread-21] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 19:57:51  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 19:57:51  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 19:57:51 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 19:57:51  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 19:57:52  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 19:57:52  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 19:57:52  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 19:57:52  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 19:57:52  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 202 ms
+2026-05-30 19:57:52  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 19:57:52  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 19:57:52  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 19:57:52  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 19:57:52  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.403 seconds (process running for 2463.496)
+2026-05-30 19:57:52  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 19:58:35  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 1 deletion, 2 modifications)
+2026-05-30 19:58:35  INFO 39324 --- [论坛系统] [Thread-25] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 19:58:35  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 19:58:35  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 19:58:35 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 19:58:35  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 19:58:35  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 19:58:35  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 19:58:35  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 19:58:35  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 19:58:35  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 281 ms
+2026-05-30 19:58:35  WARN 39324 --- [论坛系统] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleController': Injection of resource dependencies failed
+2026-05-30 19:58:35  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-30 19:58:35  INFO 39324 --- [论坛系统] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-30 19:58:35 ERROR 39324 --- [论坛系统] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.bite.forum.service.IArticleService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.bite.forum.service.IArticleService' in your configuration.
+
+2026-05-30 19:58:46  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 19:58:46 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 19:58:46  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 19:58:46  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 19:58:46  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 19:58:46  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 19:58:46  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 19:58:46  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 221 ms
+2026-05-30 19:58:46  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 19:58:47  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 19:58:47  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 19:58:47  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 19:58:47  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.455 seconds (process running for 2518.31)
+2026-05-30 19:58:47  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 19:58:48  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (3 additions, 0 deletions, 0 modifications)
+2026-05-30 19:58:48  INFO 39324 --- [论坛系统] [Thread-29] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 19:58:48  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 19:58:48  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 19:58:48 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 19:58:48  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 19:58:48  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 19:58:48  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 19:58:48  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 19:58:48  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 19:58:48  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 212 ms
+2026-05-30 19:58:49  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 19:58:49  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 19:58:49  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 19:58:49  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 19:58:49  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.399 seconds (process running for 2520.308)
+2026-05-30 19:58:49  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:00:05  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-30 20:00:05  INFO 39324 --- [论坛系统] [Thread-36] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:00:05  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:00:05  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:00:05 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:00:05  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:00:05  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:00:05  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:00:05  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:00:05  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:00:05  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 294 ms
+2026-05-30 20:00:05  WARN 39324 --- [论坛系统] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleController': Injection of resource dependencies failed
+2026-05-30 20:00:05  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-30 20:00:05  INFO 39324 --- [论坛系统] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-30 20:00:05 ERROR 39324 --- [论坛系统] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.bite.forum.service.IArticleService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.bite.forum.service.IArticleService' in your configuration.
+
+2026-05-30 20:00:07  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:00:07 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:00:07  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:00:07  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:00:07  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:00:07  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:00:07  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:00:07  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 189 ms
+2026-05-30 20:00:07  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:00:07  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:00:07  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:00:07  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:00:07  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.407 seconds (process running for 2598.695)
+2026-05-30 20:00:07  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:00:56  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-30 20:00:56  INFO 39324 --- [论坛系统] [Thread-40] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:00:56  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:00:56  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:00:56 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:00:56  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:00:57  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:00:57  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:00:57  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:00:57  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:00:57  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 259 ms
+2026-05-30 20:00:57  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:00:57  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:00:57  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:00:57  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:00:57  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.501 seconds (process running for 2648.578)
+2026-05-30 20:00:57  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:01:06  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-30 20:01:06  INFO 39324 --- [论坛系统] [Thread-47] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:01:06  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:01:06  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:01:06 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:01:06  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:01:06  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:01:06  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:01:06  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:01:06  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:01:06  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 215 ms
+2026-05-30 20:01:06  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:01:06  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:01:06  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:01:06  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:01:06  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.418 seconds (process running for 2658.029)
+2026-05-30 20:01:06  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:01:08  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-05-30 20:01:08  INFO 39324 --- [论坛系统] [Thread-51] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:01:08  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:01:08  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:01:08 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:01:08  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:01:08  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:01:08  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:01:08  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:01:08  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:01:08  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 206 ms
+2026-05-30 20:01:08  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:01:08  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:01:08  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:01:08  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:01:08  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.392 seconds (process running for 2659.997)
+2026-05-30 20:01:08  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:02:02  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-30 20:02:02  INFO 39324 --- [论坛系统] [Thread-55] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:02:02  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:02:02  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:02:02 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:02:02  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:02:02  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:02:02  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:02:02  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:02:02  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:02:02  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 184 ms
+2026-05-30 20:02:02  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:02:02  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:02:02  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:02:02  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:02:02  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.369 seconds (process running for 2713.794)
+2026-05-30 20:02:02  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:02:04  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-05-30 20:02:04  INFO 39324 --- [论坛系统] [Thread-59] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:02:04  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:02:04  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:02:04 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:02:04  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:02:04  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:02:04  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:02:04  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:02:04  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:02:04  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 166 ms
+2026-05-30 20:02:04  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:02:04  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:02:04  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:02:04  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:02:04  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.365 seconds (process running for 2715.748)
+2026-05-30 20:02:04  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:02:21  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-30 20:02:21  INFO 39324 --- [论坛系统] [Thread-63] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:02:21  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:02:22  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:02:22 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:02:22  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:02:22  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:02:22  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:02:22  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:02:22  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:02:22  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 260 ms
+2026-05-30 20:02:22  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:02:22  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:02:22  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:02:22  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:02:22  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.508 seconds (process running for 2733.725)
+2026-05-30 20:02:22  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:02:23  INFO 40280 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Starting ArticleServiceImplTest using Java 17.0.9 with PID 40280 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:02:23 DEBUG 40280 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:02:23  INFO 40280 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:02:24  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-05-30 20:02:24  INFO 39324 --- [论坛系统] [Thread-67] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:02:24  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:02:24  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:02:24 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:02:24  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:02:24  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:02:24  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:02:24  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:02:24  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:02:24  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 310 ms
+2026-05-30 20:02:24  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:02:24  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:02:24  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:02:24  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:02:24  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.637 seconds (process running for 2736.062)
+2026-05-30 20:02:24  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:02:26  INFO 40280 --- [论坛系统] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:02:27  INFO 40280 --- [论坛系统] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:02:27  INFO 40280 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Started ArticleServiceImplTest in 4.19 seconds (process running for 5.08)
+2026-05-30 20:02:28  INFO 40280 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-30 20:02:28  INFO 40280 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31de8099
+2026-05-30 20:02:28  INFO 40280 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-30 20:02:28 DEBUG 40280 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:02:28 DEBUG 40280 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-05-30 20:02:28 DEBUG 40280 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:02:28 DEBUG 40280 --- [论坛系统] [main] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:02:28 DEBUG 40280 --- [论坛系统] [main] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 1(Long)
+2026-05-30 20:02:28 DEBUG 40280 --- [论坛系统] [main] c.b.f.d.A.selectAllByBoardId             : <==      Total: 2
+2026-05-30 20:02:28  INFO 40280 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-30 20:02:28  INFO 40280 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-30 20:02:55  INFO 26400 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Starting ArticleServiceImplTest using Java 17.0.9 with PID 26400 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:02:55 DEBUG 26400 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:02:55  INFO 26400 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:02:58  INFO 26400 --- [论坛系统] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:02:59  INFO 26400 --- [论坛系统] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:02:59  INFO 26400 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Started ArticleServiceImplTest in 3.601 seconds (process running for 4.352)
+2026-05-30 20:03:00  INFO 26400 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-30 20:03:00  INFO 26400 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1701beb3
+2026-05-30 20:03:00  INFO 26400 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-30 20:03:00 DEBUG 26400 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:03:00 DEBUG 26400 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-05-30 20:03:00 DEBUG 26400 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:03:00 DEBUG 26400 --- [论坛系统] [main] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:03:00 DEBUG 26400 --- [论坛系统] [main] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 1(Long)
+2026-05-30 20:03:00 DEBUG 26400 --- [论坛系统] [main] c.b.f.d.A.selectAllByBoardId             : <==      Total: 2
+2026-05-30 20:03:00  INFO 26400 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-30 20:03:00  INFO 26400 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-30 20:03:42  INFO 40280 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Starting ArticleServiceImplTest using Java 17.0.9 with PID 40280 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:03:42 DEBUG 40280 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:03:42  INFO 40280 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:03:45  INFO 40280 --- [论坛系统] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:03:46  INFO 40280 --- [论坛系统] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:03:46  INFO 40280 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Started ArticleServiceImplTest in 3.964 seconds (process running for 4.866)
+2026-05-30 20:03:47  INFO 40280 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-30 20:03:47  INFO 40280 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c414eb3
+2026-05-30 20:03:47  INFO 40280 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-30 20:03:47 DEBUG 40280 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:03:47 DEBUG 40280 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 2(Long)
+2026-05-30 20:03:47 DEBUG 40280 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:03:47 DEBUG 40280 --- [论坛系统] [main] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:03:47 DEBUG 40280 --- [论坛系统] [main] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 2(Long)
+2026-05-30 20:03:47 DEBUG 40280 --- [论坛系统] [main] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:03:47  INFO 40280 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-30 20:03:47  INFO 40280 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-30 20:04:48  INFO 39268 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Starting ArticleServiceImplTest using Java 17.0.9 with PID 39268 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:04:48 DEBUG 39268 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:04:48  INFO 39268 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:04:51  INFO 39268 --- [论坛系统] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:04:51  INFO 39268 --- [论坛系统] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:04:52  INFO 39268 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Started ArticleServiceImplTest in 3.581 seconds (process running for 4.472)
+2026-05-30 20:04:52  INFO 39268 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-30 20:04:53  INFO 39268 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2119b989
+2026-05-30 20:04:53  INFO 39268 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-30 20:04:53 DEBUG 39268 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:04:53 DEBUG 39268 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 10(Long)
+2026-05-30 20:04:53 DEBUG 39268 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 0
+2026-05-30 20:04:53  WARN 39268 --- [论坛系统] [main] c.b.f.service.impl.ArticleServiceImpl    : code = 1301, message = 帖子不存在. board id = 10
+2026-05-30 20:04:53  INFO 39268 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-30 20:04:53  INFO 39268 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-30 20:05:32  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-30 20:05:32  INFO 39324 --- [论坛系统] [Thread-71] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:05:33  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:05:33  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:05:33 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:05:33  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:05:33  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:05:33  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:05:33  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:05:33  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:05:33  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 249 ms
+2026-05-30 20:05:33  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:05:33  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:05:33  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:05:33  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:05:33  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.504 seconds (process running for 2924.841)
+2026-05-30 20:05:33  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:05:34  INFO 4560 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Starting ArticleServiceImplTest using Java 17.0.9 with PID 4560 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:05:34 DEBUG 4560 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:05:34  INFO 4560 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:05:35  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-05-30 20:05:35  INFO 39324 --- [论坛系统] [Thread-75] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:05:35  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:05:35  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:05:35 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:05:35  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:05:35  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:05:35  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:05:35  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:05:35  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:05:35  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 401 ms
+2026-05-30 20:05:35  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:05:36  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:05:36  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:05:36  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:05:36  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.945 seconds (process running for 2927.492)
+2026-05-30 20:05:36  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:05:36  INFO 4560 --- [论坛系统] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:05:38  INFO 4560 --- [论坛系统] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:05:38  INFO 4560 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Started ArticleServiceImplTest in 4.639 seconds (process running for 5.47)
+2026-05-30 20:05:39  INFO 4560 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-30 20:05:39  INFO 4560 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d373794
+2026-05-30 20:05:39  INFO 4560 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-30 20:05:39 DEBUG 4560 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:05:39 DEBUG 4560 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 10(Long)
+2026-05-30 20:05:39 DEBUG 4560 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 0
+2026-05-30 20:05:39  WARN 4560 --- [论坛系统] [main] c.b.f.service.impl.ArticleServiceImpl    : code = 1203, message = 版块不存在. board id = 10
+2026-05-30 20:05:39  INFO 4560 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-30 20:05:39  INFO 4560 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-30 20:05:56  INFO 40652 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Starting ArticleServiceImplTest using Java 17.0.9 with PID 40652 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:05:56 DEBUG 40652 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:05:56  INFO 40652 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:05:59  INFO 40652 --- [论坛系统] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:06:00  INFO 40652 --- [论坛系统] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:06:01  INFO 40652 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Started ArticleServiceImplTest in 5.293 seconds (process running for 6.483)
+2026-05-30 20:06:02  INFO 40652 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-30 20:06:02  INFO 40652 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50b2ba2c
+2026-05-30 20:06:02  INFO 40652 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-30 20:06:02 DEBUG 40652 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:06:02 DEBUG 40652 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-05-30 20:06:02 DEBUG 40652 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:06:02 DEBUG 40652 --- [论坛系统] [main] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:06:02 DEBUG 40652 --- [论坛系统] [main] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 1(Long)
+2026-05-30 20:06:02 DEBUG 40652 --- [论坛系统] [main] c.b.f.d.A.selectAllByBoardId             : <==      Total: 2
+2026-05-30 20:06:02  INFO 40652 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-30 20:06:02  INFO 40652 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-30 20:06:37  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-30 20:06:37  INFO 39324 --- [论坛系统] [Thread-79] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:06:37  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:06:37  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:06:37 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:06:37  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:06:37  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:06:37  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:06:37  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:06:37  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:06:37  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 272 ms
+2026-05-30 20:06:37  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:06:38  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:06:38  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:06:38  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:06:38  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.536 seconds (process running for 2989.237)
+2026-05-30 20:06:38  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:06:39  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-05-30 20:06:39  INFO 39324 --- [论坛系统] [Thread-83] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:06:39  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:06:39  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:06:39 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:06:39  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:06:39  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:06:39  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:06:39  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:06:39  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:06:39  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 192 ms
+2026-05-30 20:06:39  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:06:40  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:06:40  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:06:40  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:06:40  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.376 seconds (process running for 2991.242)
+2026-05-30 20:06:40  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:08:20  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-30 20:08:20  INFO 39324 --- [论坛系统] [Thread-87] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:08:20  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:08:20  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:08:20 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:08:20  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:08:20  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:08:20  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:08:20  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:08:20  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:08:20  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 209 ms
+2026-05-30 20:08:20  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:08:20  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:08:20  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:08:20  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:08:20  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.394 seconds (process running for 3091.997)
+2026-05-30 20:08:20  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:10:43  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-05-30 20:10:43  INFO 39324 --- [论坛系统] [Thread-91] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:10:43  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:10:43  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:10:43 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:10:43  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:10:43  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:10:43  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:10:43  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:10:43  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:10:43  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 198 ms
+2026-05-30 20:10:44  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:10:44  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:10:44  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:10:44  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:10:44  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.393 seconds (process running for 3235.388)
+2026-05-30 20:10:44  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:11:12  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-30 20:11:12  INFO 39324 --- [论坛系统] [Thread-95] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:11:12  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:11:12  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:11:12 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:11:12  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:11:12  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:11:12  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:11:12  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:11:12  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:11:12  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 273 ms
+2026-05-30 20:11:12  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:11:12  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:11:12  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:11:12  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:11:12  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.624 seconds (process running for 3264.077)
+2026-05-30 20:11:12  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:11:14  INFO 39324 --- [论坛系统] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-05-30 20:11:14  INFO 39324 --- [论坛系统] [Thread-99] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:11:14  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:11:14  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 39324 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:11:14 DEBUG 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:11:14  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:11:14  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:11:14  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:11:14  INFO 39324 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:11:14  INFO 39324 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:11:14  INFO 39324 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 199 ms
+2026-05-30 20:11:14  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:11:14  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:11:14  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:11:14  INFO 39324 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:11:14  INFO 39324 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.375 seconds (process running for 3266.013)
+2026-05-30 20:11:14  INFO 39324 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-30 20:11:24  INFO 39324 --- [论坛系统] [http-nio-58080-exec-2] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 20:11:24  INFO 39324 --- [论坛系统] [http-nio-58080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-30 20:11:24  INFO 39324 --- [论坛系统] [http-nio-58080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-30 20:11:25  INFO 39324 --- [论坛系统] [http-nio-58080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 184 ms
+2026-05-30 20:11:36  INFO 39324 --- [论坛系统] [http-nio-58080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-05-30 20:11:36  INFO 39324 --- [论坛系统] [http-nio-58080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71d392d6
+2026-05-30 20:11:36  INFO 39324 --- [论坛系统] [http-nio-58080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-05-30 20:11:36 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-05-30 20:11:36 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-05-30 20:11:36 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-05-30 20:11:36  INFO 39324 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-30 20:11:44 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-2] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 20:11:44 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-2] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 20:11:44 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-2] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 20:11:51 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:11:51 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-05-30 20:11:51 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:11:51 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:11:51 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 1(Long)
+2026-05-30 20:11:51 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.selectAllByBoardId             : <==      Total: 2
+2026-05-30 20:11:56 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:11:56 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 2(Long)
+2026-05-30 20:11:56 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:11:56 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:11:56 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 2(Long)
+2026-05-30 20:11:56 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:12:41 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:12:41 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 10(Long)
+2026-05-30 20:12:41 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 0
+2026-05-30 20:12:41  WARN 39324 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.service.impl.ArticleServiceImpl    : code = 1203, message = 版块不存在. board id = 10
+2026-05-30 20:12:41 ERROR 39324 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.exception.GlobalExceptionHandler   : 版块不存在
+2026-05-30 20:12:41  WARN 39324 --- [论坛系统] [http-nio-58080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bite.forum.exception.ApplicationException: 版块不存在]
+2026-05-30 20:15:34 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-05-30 20:15:34 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-05-30 20:15:34 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-05-30 20:15:34  INFO 39324 --- [论坛系统] [http-nio-58080-exec-7] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-30 20:15:34 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.BoardMapper.selectByNum    : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where deleteState = 0 and state = 0 order by sort asc limit ?
+2026-05-30 20:15:34 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.BoardMapper.selectByNum    : ==> Parameters: 9(Integer)
+2026-05-30 20:15:34 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.BoardMapper.selectByNum    : <==      Total: 9
+2026-05-30 20:15:34 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 20:15:34 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 20:15:34 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 20:15:34 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-6] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 20:15:34 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-6] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 20:15:34 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-6] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 20:15:35 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 20:15:35 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 20:15:35 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 20:15:35 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 20:15:35 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 20:15:35 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 20:15:38 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 20:15:38 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 20:15:38 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 20:15:38 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 20:15:38 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 20:15:38 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 20:15:38 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-7] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 20:15:38 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-7] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 20:15:38 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-7] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 20:15:39 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 20:15:39 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 20:15:39 DEBUG 39324 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 20:15:50  INFO 39324 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:15:50  INFO 39324 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:15:50  INFO 39324 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-05-30 20:15:50  INFO 39324 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-05-30 20:15:52  INFO 40844 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 40844 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 20:15:52 DEBUG 40844 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 20:15:52  INFO 40844 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 20:15:52  INFO 40844 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-30 20:15:52  INFO 40844 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-30 20:15:53  INFO 40844 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-05-30 20:15:53  INFO 40844 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30 20:15:53  INFO 40844 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-30 20:15:53  INFO 40844 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-30 20:15:53  INFO 40844 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1118 ms
+2026-05-30 20:15:54  INFO 40844 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 20:15:54  INFO 40844 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-30 20:15:54  INFO 40844 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 20:15:54  INFO 40844 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-05-30 20:15:54  INFO 40844 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 2.343 seconds (process running for 2.752)
+2026-05-30 20:15:55  INFO 40844 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 20:15:55  INFO 40844 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-30 20:15:55  INFO 40844 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-30 20:15:55  INFO 40844 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-30 20:15:55  INFO 40844 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a748ca3
+2026-05-30 20:15:55  INFO 40844 --- [论坛系统] [RMI TCP Connection(3)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-30 20:16:03 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-05-30 20:16:03 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-05-30 20:16:03 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-05-30 20:16:03  INFO 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-30 20:16:04 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.BoardMapper.selectByNum    : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where deleteState = 0 and state = 0 order by sort asc limit ?
+2026-05-30 20:16:04 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.BoardMapper.selectByNum    : ==> Parameters: 9(Integer)
+2026-05-30 20:16:04 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.BoardMapper.selectByNum    : <==      Total: 9
+2026-05-30 20:16:04 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 20:16:04 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 20:16:04 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 20:16:04 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:16:04 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-05-30 20:16:04 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:16:04 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:16:04 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 1(Long)
+2026-05-30 20:16:04 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectAllByBoardId             : <==      Total: 2
+2026-05-30 20:16:06 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:16:06 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 2(Long)
+2026-05-30 20:16:06 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:16:06 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:16:06 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 2(Long)
+2026-05-30 20:16:06 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:16:07 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:16:07 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-05-30 20:16:07 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:16:07 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:16:07 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 1(Long)
+2026-05-30 20:16:07 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectAllByBoardId             : <==      Total: 2
+2026-05-30 20:16:08 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 20:16:08 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 20:16:08 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 20:16:08 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:16:08 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-05-30 20:16:08 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:16:08 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:16:08 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 1(Long)
+2026-05-30 20:16:08 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.selectAllByBoardId             : <==      Total: 2
+2026-05-30 20:16:08 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:16:08 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 2(Long)
+2026-05-30 20:16:08 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:16:08 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:16:08 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 2(Long)
+2026-05-30 20:16:08 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:16:09 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:16:09 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 3(Long)
+2026-05-30 20:16:09 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:16:09 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:16:09 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 3(Long)
+2026-05-30 20:16:09 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:16:09 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:16:09 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 4(Long)
+2026-05-30 20:16:09 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:16:09 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:16:09 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 4(Long)
+2026-05-30 20:16:09 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 5(Long)
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 5(Long)
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 6(Long)
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 6(Long)
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 7(Long)
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 7(Long)
+2026-05-30 20:16:10 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:16:11 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:16:11 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 8(Long)
+2026-05-30 20:16:11 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:16:11 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:16:11 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 8(Long)
+2026-05-30 20:16:11 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:16:11 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:16:11 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 9(Long)
+2026-05-30 20:16:11 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:16:11 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:16:11 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 9(Long)
+2026-05-30 20:16:11 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:16:12 ERROR 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.exception.GlobalExceptionHandler   : No static resource .well-known/appspecific/com.chrome.devtools.json.
+2026-05-30 20:16:12  WARN 40844 --- [论坛系统] [http-nio-58080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-05-30 20:16:13 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-7] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 20:16:13 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-7] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 20:16:13 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-7] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 20:16:15 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:16:15 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-05-30 20:16:15 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:16:15 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:16:15 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 1(Long)
+2026-05-30 20:16:15 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.A.selectAllByBoardId             : <==      Total: 2
+2026-05-30 20:16:16 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:16:16 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 2(Long)
+2026-05-30 20:16:16 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:16:16 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:16:16 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 2(Long)
+2026-05-30 20:16:16 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:16:19 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:16:19 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 4(Long)
+2026-05-30 20:16:19 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:16:19 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:16:19 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 4(Long)
+2026-05-30 20:16:19 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:54:26 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-05-30 20:54:26 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-05-30 20:54:26 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-05-30 20:54:26  INFO 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-30 20:54:26 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.BoardMapper.selectByNum    : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where deleteState = 0 and state = 0 order by sort asc limit ?
+2026-05-30 20:54:26 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.BoardMapper.selectByNum    : ==> Parameters: 9(Integer)
+2026-05-30 20:54:26 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.BoardMapper.selectByNum    : <==      Total: 9
+2026-05-30 20:54:26 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 20:54:26 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 20:54:26 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 20:54:27 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:54:27 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-05-30 20:54:27 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:54:27 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:54:27 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 1(Long)
+2026-05-30 20:54:27 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectAllByBoardId             : <==      Total: 2
+2026-05-30 20:54:28 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:54:28 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 3(Long)
+2026-05-30 20:54:28 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:54:28 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:54:28 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 3(Long)
+2026-05-30 20:54:28 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:54:28 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:54:28 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 2(Long)
+2026-05-30 20:54:28 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:54:28 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:54:28 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 2(Long)
+2026-05-30 20:54:28 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:54:30 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:54:30 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 6(Long)
+2026-05-30 20:54:30 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:54:30 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:54:30 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 6(Long)
+2026-05-30 20:54:30 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 5(Long)
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 5(Long)
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 7(Long)
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 7(Long)
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 8(Long)
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 8(Long)
+2026-05-30 20:54:31 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:54:32 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:54:32 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 9(Long)
+2026-05-30 20:54:32 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:54:32 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:54:32 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 9(Long)
+2026-05-30 20:54:32 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:54:33 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:54:33 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-05-30 20:54:33 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:54:33 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:54:33 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 1(Long)
+2026-05-30 20:54:33 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.selectAllByBoardId             : <==      Total: 2
+2026-05-30 20:54:36 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:54:36 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 2(Long)
+2026-05-30 20:54:36 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:54:36 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:54:36 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 2(Long)
+2026-05-30 20:54:36 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:54:36 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:54:36 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-05-30 20:54:36 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:54:36 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:54:36 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 1(Long)
+2026-05-30 20:54:36 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectAllByBoardId             : <==      Total: 2
+2026-05-30 20:54:37 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 20:54:37 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 20:54:37 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 20:54:39  INFO 40844 --- [论坛系统] [http-nio-58080-exec-1] c.bite.forum.controller.UserController   : 用户退出登录成功
+2026-05-30 20:55:20 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-05-30 20:55:20 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-05-30 20:55:20 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-05-30 20:55:20  INFO 40844 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-05-30 20:55:20 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.BoardMapper.selectByNum    : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where deleteState = 0 and state = 0 order by sort asc limit ?
+2026-05-30 20:55:20 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.BoardMapper.selectByNum    : ==> Parameters: 9(Integer)
+2026-05-30 20:55:20 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.BoardMapper.selectByNum    : <==      Total: 9
+2026-05-30 20:55:20 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-05-30 20:55:20 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-05-30 20:55:20 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 2
+2026-05-30 20:55:21 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:55:21 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-05-30 20:55:21 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:55:21 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:55:21 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 1(Long)
+2026-05-30 20:55:21 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.selectAllByBoardId             : <==      Total: 2
+2026-05-30 20:55:21 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:55:21 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 2(Long)
+2026-05-30 20:55:21 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:55:21 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:55:21 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 2(Long)
+2026-05-30 20:55:21 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-05-30 20:56:03 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 20:56:03 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-05-30 20:56:03 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 20:56:03 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-05-30 20:56:03 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 1(Long)
+2026-05-30 20:56:03 DEBUG 40844 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.selectAllByBoardId             : <==      Total: 2
+2026-05-30 20:58:56  INFO 40844 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30 20:58:56  INFO 40844 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-30 20:58:56  INFO 40844 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-30 20:58:56  INFO 40844 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-30 21:00:56  INFO 5852 --- [论坛系统] [main] c.b.f.service.impl.BoardServiceImplTest  : Starting BoardServiceImplTest using Java 17.0.9 with PID 5852 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 21:00:56 DEBUG 5852 --- [论坛系统] [main] c.b.f.service.impl.BoardServiceImplTest  : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 21:00:56  INFO 5852 --- [论坛系统] [main] c.b.f.service.impl.BoardServiceImplTest  : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 21:00:58  INFO 5852 --- [论坛系统] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 21:01:00  INFO 5852 --- [论坛系统] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 21:01:00  INFO 5852 --- [论坛系统] [main] c.b.f.service.impl.BoardServiceImplTest  : Started BoardServiceImplTest in 4.082 seconds (process running for 4.949)
+2026-05-30 21:01:01  INFO 5852 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-30 21:01:01  INFO 5852 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23cfdfa2
+2026-05-30 21:01:01  INFO 5852 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-30 21:01:01 DEBUG 5852 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 21:01:01 DEBUG 5852 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-05-30 21:01:01 DEBUG 5852 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 21:01:01  INFO 5852 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-30 21:01:01  INFO 5852 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-30 21:01:59  INFO 39144 --- [论坛系统] [main] c.b.f.service.impl.BoardServiceImplTest  : Starting BoardServiceImplTest using Java 17.0.9 with PID 39144 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 21:01:59 DEBUG 39144 --- [论坛系统] [main] c.b.f.service.impl.BoardServiceImplTest  : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 21:01:59  INFO 39144 --- [论坛系统] [main] c.b.f.service.impl.BoardServiceImplTest  : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 21:02:01  INFO 39144 --- [论坛系统] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 21:02:02  INFO 39144 --- [论坛系统] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 21:02:02  INFO 39144 --- [论坛系统] [main] c.b.f.service.impl.BoardServiceImplTest  : Started BoardServiceImplTest in 3.784 seconds (process running for 4.598)
+2026-05-30 21:02:03  INFO 39144 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-30 21:02:03  INFO 39144 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a84b6de
+2026-05-30 21:02:03  INFO 39144 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-30 21:02:03 DEBUG 39144 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 21:02:03 DEBUG 39144 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-05-30 21:02:03 DEBUG 39144 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 21:02:03  INFO 39144 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-30 21:02:03  INFO 39144 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-30 21:02:27  INFO 40144 --- [论坛系统] [main] c.b.f.service.impl.BoardServiceImplTest  : Starting BoardServiceImplTest using Java 17.0.9 with PID 40144 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 21:02:27 DEBUG 40144 --- [论坛系统] [main] c.b.f.service.impl.BoardServiceImplTest  : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 21:02:27  INFO 40144 --- [论坛系统] [main] c.b.f.service.impl.BoardServiceImplTest  : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 21:02:29  INFO 40144 --- [论坛系统] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 21:02:30  INFO 40144 --- [论坛系统] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 21:02:30  INFO 40144 --- [论坛系统] [main] c.b.f.service.impl.BoardServiceImplTest  : Started BoardServiceImplTest in 3.719 seconds (process running for 4.535)
+2026-05-30 21:02:31  INFO 40144 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-30 21:02:31  INFO 40144 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1018f702
+2026-05-30 21:02:31  INFO 40144 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-30 21:02:31 DEBUG 40144 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 21:02:31 DEBUG 40144 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 2(Long)
+2026-05-30 21:02:31 DEBUG 40144 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-05-30 21:02:31  INFO 40144 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-30 21:02:31  INFO 40144 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-30 21:02:45  INFO 17816 --- [论坛系统] [main] c.b.f.service.impl.BoardServiceImplTest  : Starting BoardServiceImplTest using Java 17.0.9 with PID 17816 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-05-30 21:02:45 DEBUG 17816 --- [论坛系统] [main] c.b.f.service.impl.BoardServiceImplTest  : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-05-30 21:02:45  INFO 17816 --- [论坛系统] [main] c.b.f.service.impl.BoardServiceImplTest  : No active profile set, falling back to 1 default profile: "default"
+2026-05-30 21:02:47  INFO 17816 --- [论坛系统] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-30 21:02:47  INFO 17816 --- [论坛系统] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30 21:02:48  INFO 17816 --- [论坛系统] [main] c.b.f.service.impl.BoardServiceImplTest  : Started BoardServiceImplTest in 3.362 seconds (process running for 4.192)
+2026-05-30 21:02:48  INFO 17816 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-30 21:02:49  INFO 17816 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31de8099
+2026-05-30 21:02:49  INFO 17816 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-30 21:02:49 DEBUG 17816 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-05-30 21:02:49 DEBUG 17816 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 10(Long)
+2026-05-30 21:02:49 DEBUG 17816 --- [论坛系统] [main] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 0
+2026-05-30 21:02:49  INFO 17816 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-30 21:02:49  INFO 17816 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
