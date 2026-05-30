@@ -46,5 +46,7 @@ mybatis:
 lyz-forum:
   login:
     url: sign-in.html # 未登录状况下强制跳转⻚⾯
+  index: # ⾸⻚配置节点
+    board-num: 9 # ⾸⻚中显⽰的版块个数
 
 
