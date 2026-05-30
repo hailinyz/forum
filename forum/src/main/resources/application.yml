@@ -42,3 +42,9 @@ logging:
 mybatis:
   mapper-locations: classpath:mapper/**/*.xml # 扫描的mapper文件
 
+# 项⽬⾃定义相关配置
+lyz-forum:
+  login:
+    url: sign-in.html # 未登录状况下强制跳转⻚⾯
+
+

@@ -14,10 +14,7 @@ import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 // 添加⽇志注解以便使⽤⽇志
 @Slf4j
@@ -96,17 +93,12 @@ public class UserController {
      */
     @Operation(summary = "获取用户信息")
     @GetMapping("/info")
-    public AppResult< User> getUserInfo(HttpServletRequest request, Long id) {
+    public AppResult< User> getUserInfo(HttpServletRequest request, @RequestParam(required = false) Long id) {
         User user = null;
         //根据id的值判断User对象的获取方式
         if (id == null) {
             //1.如果id为空，则获取Session作用域中的User对象
             HttpSession session = request.getSession(false);
-            // 判断session和用户信息是否一致
-            if (session == null || session.getAttribute(AppConfig.USER_SESSION) == null) {
-                //用户没有登录，返回错误信息
-                return AppResult.failed(ResultCode.FAILED_FORBIDDEN);
-            }
             //获取用户信息
             user = (User) session.getAttribute(AppConfig.USER_SESSION);
         } else {
