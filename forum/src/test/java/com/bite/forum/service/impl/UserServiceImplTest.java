@@ -58,4 +58,11 @@ class UserServiceImplTest {
         User user = userService.selectById(1L);
         System.out.println(user);
     }
+
+    @Transactional
+    @Test
+    void addOneArticleCountById() {
+        userService.addOneArticleCountById(1L);
+        System.out.println(userService.selectById(1L));
+    }
 }

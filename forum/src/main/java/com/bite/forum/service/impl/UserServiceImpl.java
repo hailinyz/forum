@@ -140,6 +140,42 @@ public class UserServiceImpl implements IUserService { // 实现类 implements�
         return user;
     }
 
+    /*
+    * 更新当前用户的发帖数
+     */
+    @Override
+    public void addOneArticleCountById(Long id) {
+        //非空校验
+        if (id == null || id <= 0) {
+            //打印日志
+            log.warn(ResultCode.FAILED_BOARD_ARTICLE_COUNT.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_BOARD_ARTICLE_COUNT));
+        }
+        //查询用户信息
+        User user = userMapper.selectByPrimaryKey(id);
+        if (user == null) {
+            //打印日志
+            log.warn(ResultCode.ERROR_IS_NULL.toString() + "user id = " + id);
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.ERROR_IS_NULL));
+        }
+        //更新用户帖子数量
+        User updateUser = new User();
+        updateUser.setId(user.getId());
+        updateUser.setArticleCount(user.getArticleCount() + 1);
+        int row = userMapper.updateByPrimaryKeySelective(updateUser);
+        if (row != 1) {
+            //打印日志
+            log.warn(ResultCode.FAILED_USER_ARTICLE_COUNT.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_USER_ARTICLE_COUNT));
+        }
+    }
+
+
+
+
 
 
 

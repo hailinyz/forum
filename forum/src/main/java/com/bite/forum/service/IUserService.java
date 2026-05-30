@@ -29,5 +29,10 @@ public interface IUserService {
      */
     User selectById(Long id);
 
+    /*
+    * 更新当前用户的发帖数
+     */
+    void addOneArticleCountById(Long id);
+
 
 }

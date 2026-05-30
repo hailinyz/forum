@@ -35,12 +35,55 @@ public class BoardServiceImpl implements IBoradService {
         return result;
     }
 
+
+    /*
+    更新板块中的帖子数据
+     */
     @Override
-    public List<Board> selectAllNormal() {
-        return List.of();
+    public void addOneArticleCountById(Long id) {
+        //非空校验
+        if (id == null || id <= 0) {
+            //打印日志
+            log.warn(ResultCode.FAILED_BOARD_ARTICLE_COUNT.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_BOARD_ARTICLE_COUNT));
+        }
+        //查询对应板块中的帖子数
+        Board board = boardMapper.selectByPrimaryKey(id);
+        if (board == null) {
+            //打印日志
+            log.warn(ResultCode.ERROR_IS_NULL.toString() + "board id = " + id);
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.ERROR_IS_NULL));
+        }
+        //更新帖子数量
+        Board updateBoard = new Board();
+        updateBoard.setId(board.getId());
+        updateBoard.setArticleCount(board.getArticleCount() + 1);
+        int row = boardMapper.updateByPrimaryKeySelective(updateBoard);
+        if (row != 1) {
+            //打印日志
+            log.warn(ResultCode.FAILED_USER_ARTICLE_COUNT.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_USER_ARTICLE_COUNT));
+        }
     }
 
-
+    /*
+    根据id查询板块信息
+     */
+    @Override
+    public Board selectById(Long id) {
+        //非空校验
+        if (id == null || id <= 0) {
+            //打印日志
+            log.warn(ResultCode.ERROR_IS_NULL.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.ERROR_IS_NULL));
+        }
+        Board board = boardMapper.selectByPrimaryKey(id);
+        return board;
+    }
 
 
 }

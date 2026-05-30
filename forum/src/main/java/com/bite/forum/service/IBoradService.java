@@ -8,6 +8,16 @@ public interface IBoradService {
 
     List<Board> selectByNum (Integer num);
 
-    List<Board> selectAllNormal ();
+//    List<Board> selectAllNormal ();
+
+    /*
+    * 更新板块中的帖子数据
+     */
+    void addOneArticleCountById(Long id);
+
+    /*
+    * 根据id查询板块信息
+     */
+    Board selectById(Long  id);
 
 }
