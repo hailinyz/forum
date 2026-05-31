@@ -46,4 +46,11 @@ class ArticleServiceImplTest {
         //用json的方法打印
         System.out.println(objectMapper.writeValueAsString(articles));
     }
+
+    @Transactional
+    @Test
+    void selectDetailById() throws JsonProcessingException {
+        Article article = articleService.selectDetailById(7L);
+        System.out.println(objectMapper.writeValueAsString(article));
+    }
 }

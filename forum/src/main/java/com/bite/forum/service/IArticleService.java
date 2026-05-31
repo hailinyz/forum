@@ -23,6 +23,11 @@ public interface IArticleService {
      */
     List<Article> selectByBoardId(Long boardId);
 
+    /*
+    根据id查询指定帖子详情
+     */
+    Article selectDetailById(Long id);
+
 
 
 }

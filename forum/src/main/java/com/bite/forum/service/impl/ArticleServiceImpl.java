@@ -124,6 +124,46 @@ public class ArticleServiceImpl implements IArticleService {
         return articles;
     }
 
+    /*
+    * 根据帖子id查询帖子详情
+     */
+    @Override
+    public Article selectDetailById(Long id) {
+        //非空校验
+        if (id == null || id <= 0) {
+            //打印日志
+            log.warn(ResultCode.FAILED_PARAMS_VALIDATE.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_PARAMS_VALIDATE));
+        }
+        //调用DAO
+        Article article = articleMapper.selectDetailById(id);
+        //判断结果是否为空
+        if (article == null) {
+            //打印日志
+            log.warn(ResultCode.FAILED_ARTICLE_NOT_EXISTS.toString() + "article id = " + id);
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_ARTICLE_NOT_EXISTS));
+        }
+        //更新帖子访问数
+        Article updateArticle = new Article();
+        updateArticle.setId(article.getId());
+        updateArticle.setVisitCount(article.getVisitCount() + 1);
+        int updateRow = articleMapper.updateByPrimaryKeySelective(updateArticle);
+        if (updateRow != 1) {
+            //打印日志
+            log.warn(ResultCode.ERROR_SERVICES.toString() + "article id = " + id);
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.ERROR_SERVICES));
+        }
+        //返回帖子详情 - 为返回对象进行数据更新（访问次数更新）
+        article.setVisitCount(article.getVisitCount() + 1);
+        return article;
+    }
+
+
+
+
 
 
 

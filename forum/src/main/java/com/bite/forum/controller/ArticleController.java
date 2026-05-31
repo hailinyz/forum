@@ -90,6 +90,23 @@ public class ArticleController {
     }
 
 
+    /*
+    * 根据帖子id获取帖子详情
+     */
+    @Operation(summary = "根据帖子id获取帖子详情")
+    @GetMapping("/details")
+    public AppResult<Article> getDetailById(@RequestParam(required = true) Long id) {
+        //调用Service
+        Article article = articleService.selectDetailById(id);
+        //非空判断
+        if (article == null) {
+            return AppResult.failed(ResultCode.FAILED_ARTICLE_NOT_EXISTS);
+        }
+        //响应结果
+        return AppResult.success(article);
+    }
+
+
 
 
 

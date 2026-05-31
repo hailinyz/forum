@@ -29,5 +29,10 @@ public interface ArticleMapper {
      */
     List<Article> selectAllByBoardId(Long boardId);
 
+    /*
+    根据板块ID查询指定板块的帖子详情
+     */
+    Article selectDetailById(Long id);
+
 
 }
