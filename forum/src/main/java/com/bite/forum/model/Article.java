@@ -30,6 +30,9 @@ public class Article {
 
     private String content;
 
+    //是否作者
+    private boolean isOwn = false;
+
     //关联对象-作者
     private User user;
 

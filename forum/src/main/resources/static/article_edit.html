@@ -87,7 +87,34 @@
     // ========================== 获取帖子详情 ========================== 
     // 成功后，设置ID,版块名，标题，并初始编辑区同时设置正文initEditor(edit_article.content);
     $.ajax({
-
+      url: '/article/details?id=' + currentArticle.id,
+      type: 'GET',
+      data: {
+        id: $('#edit_article_id').val()
+      },
+      success: function (respData) {
+        if (respData.code === 0) {
+          // 成功后，设置ID,版块名，标题，并初始编辑区同时设置正文initEditor(edit_article.content);
+          let article = respData.data;
+          $('#edit_article_id').val(article.id);
+          $('#edit_article_board_name').html(article.board.name);
+          $('#edit_article_title').val(article.title); //设置input的内容用的是val()
+          initEditor(article.content);
+        } else {
+          $.toast({
+            heading: '警告',
+            text: respData.message || '获取帖子详情失败，请稍后重试',
+            icon: 'warning'
+          });
+        }
+      },
+      error: function () {
+        $.toast({
+          heading: '错误',
+          text: '获取帖子详情失败，请稍后重试',
+          icon: 'error'
+        });
+      }
     });
     
     // ========================== 初始化编辑器 ========================== 
@@ -124,6 +151,15 @@
     $('#edit_article_submit').click(function () {
         // ID
         let articleIdEl = $('#edit_article_id');
+        if (!articleIdEl.val()) {
+          // 提示
+          $.toast({
+              heading: '提示',
+              text: '帖子ID异常，请刷新页面重试',
+              icon: 'warning'
+          });
+          return;
+        }
         let articleTitleEl = $('#edit_article_title');
         if (!articleTitleEl.val()) {
           articleTitleEl.focus();
@@ -149,10 +185,42 @@
       }
 
         // 构造修改对象
-
+        let postData = {
+            id: articleIdEl.val(),
+            title: articleTitleEl.val(),
+            content: articleContentEl.val()
+          };
         // 发送修改请求, 成功后跳转至首页changeNavActive($('#nav_board_index'));
         $.ajax({
-
+          url: 'article/modify',
+          type: 'POST',
+          contentType: 'application/x-www-form-urlencoded',
+          data: postData,
+          success: function (respData) {
+            if (respData.code == 0) {
+              // 提示
+              $.toast({
+                heading: '成功',
+                text: '修改帖子成功',
+                icon: 'success'
+              });
+              // 成功后，跳转至首页changeNavActive($('#nav_board_index'));
+              changeNavActive($('#nav_board_index'));
+            } else {
+              $.toast({
+                heading: '警告',
+                text: respData.message || '修改帖子失败，请稍后重试',
+                icon: 'warning'
+              });
+            }
+          },
+          error: function () {
+            $.toast({
+              heading: '错误',
+              text: '修改帖子失败，请稍后重试',
+              icon: 'error'
+            });
+          }
         });
     });
     

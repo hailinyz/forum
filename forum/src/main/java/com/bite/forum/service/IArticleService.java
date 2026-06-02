@@ -28,6 +28,11 @@ public interface IArticleService {
      */
     Article selectDetailById(Long id);
 
+    /*
+    根据帖⼦Id更新帖⼦标题与内容
+     */
+    void modify(Long id, String title, String content);
 
+    Article selectById(Long id);
 
 }
