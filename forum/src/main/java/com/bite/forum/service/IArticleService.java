@@ -35,4 +35,9 @@ public interface IArticleService {
 
     Article selectById(Long id);
 
+    /*
+    点赞
+     */
+    void thumbsUpById(Long id);
+
 }

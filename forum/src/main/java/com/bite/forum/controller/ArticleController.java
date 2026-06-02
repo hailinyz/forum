@@ -154,6 +154,29 @@ public class ArticleController {
 
 
 
+    /*
+    * 点赞
+     */
+    @Operation(summary = "点赞")
+    @PostMapping("/thumbsUp")
+    public AppResult thumbsUp(HttpServletRequest request, Long id) {
+        //获取当前用户
+        HttpSession session = request.getSession(false);
+        User user = (User) session.getAttribute(AppConfig.USER_SESSION);
+        //判断当前用户是否被禁言
+        if (user.getState() == 1) { //表示用户已被禁言
+            return AppResult.failed(ResultCode.FAILED_USER_BANNED);
+        }
+        //更新点赞数
+        articleService.thumbsUpById(id);
+        return AppResult.success();
+    }
+
+
+
+
+
+
 
 
 

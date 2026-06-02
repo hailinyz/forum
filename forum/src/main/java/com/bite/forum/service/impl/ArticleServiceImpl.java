@@ -204,6 +204,44 @@ public class ArticleServiceImpl implements IArticleService {
         return article;
     }
 
+    /*
+    根据帖子id点赞
+     */
+    @Override
+    public void thumbsUpById(Long id) {
+        //非空校验
+        if (id == null || id <= 0) {
+            //打印日志
+            log.warn(ResultCode.ERROR_IS_NULL.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.ERROR_IS_NULL));
+        }
+        //查询帖子信息
+        Article article = selectById( id);
+        if (article == null) {
+            //打印日志
+            log.warn(ResultCode.FAILED_ARTICLE_NOT_EXISTS.toString() + "article id = " + id);
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_ARTICLE_NOT_EXISTS));
+        }
+        //构建需要更新的帖子对象
+        Article updateArticle = new Article();
+        updateArticle.setId(article.getId());
+        updateArticle.setLikeCount(article.getLikeCount() + 1);
+        int updateRow = articleMapper.updateByPrimaryKeySelective(updateArticle);
+        if (updateRow != 1) {
+            //打印日志
+            log.warn(ResultCode.ERROR_SERVICES.toString() + "article id = " + id);
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.ERROR_SERVICES));
+        }
+    }
+
+
+
+
+
+
 
 
 

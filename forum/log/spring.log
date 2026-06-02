@@ -889,3 +889,523 @@ Consider defining a bean of type 'com.bite.forum.service.IArticleService' in you
 2026-06-02 17:38:52  INFO 30140 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
 2026-06-02 17:38:52  INFO 30140 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 0.399 seconds (process running for 4247.254)
 2026-06-02 17:38:52  INFO 30140 --- [论坛系统] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-02 17:39:43  INFO 30140 --- [论坛系统] [http-nio-58080-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-02 17:39:43  INFO 30140 --- [论坛系统] [http-nio-58080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-02 17:39:43  INFO 30140 --- [论坛系统] [http-nio-58080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-02 17:39:49  INFO 30140 --- [论坛系统] [http-nio-58080-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 81 ms
+2026-06-02 17:40:08  INFO 30140 --- [论坛系统] [http-nio-58080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-06-02 17:40:08  INFO 30140 --- [论坛系统] [http-nio-58080-exec-6] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2fd92188
+2026-06-02 17:40:08  INFO 30140 --- [论坛系统] [http-nio-58080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-06-02 17:40:08 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-06-02 17:40:08 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-06-02 17:40:08 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-06-02 17:40:08  INFO 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-06-02 17:40:19 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.selectByPrimaryKey             : ==>  Preparing: select id, boardId, userId, title, visitCount, replyCount, likeCount, state, deleteState, createTime, updateTime , content from t_article where id = ?
+2026-06-02 17:40:19 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.selectByPrimaryKey             : ==> Parameters: 7(Long)
+2026-06-02 17:40:19 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.selectByPrimaryKey             : <==      Total: 1
+2026-06-02 17:46:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-06-02 17:46:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-06-02 17:46:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-06-02 17:46:43  INFO 30140 --- [论坛系统] [http-nio-58080-exec-10] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-06-02 17:46:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.BoardMapper.selectByNum    : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where deleteState = 0 and state = 0 order by sort asc limit ?
+2026-06-02 17:46:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.BoardMapper.selectByNum    : ==> Parameters: 9(Integer)
+2026-06-02 17:46:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.BoardMapper.selectByNum    : <==      Total: 9
+2026-06-02 17:46:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:46:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:46:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:46:44 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:46:44 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 10(Long)
+2026-06-02 17:46:44 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:46:44 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:46:44 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 7(Integer), 10(Long)
+2026-06-02 17:46:44 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:46:49 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-10] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:46:49 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-10] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:46:49 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-10] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:46:49 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:46:49 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:46:49 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:46:49 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:46:49 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 20(Integer), 9(Long)
+2026-06-02 17:46:49 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:46:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:46:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:46:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:46:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:46:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 21(Integer), 9(Long)
+2026-06-02 17:46:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:46:56 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:46:56 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:46:56 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:51:10 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.BoardMapper.selectByNum    : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where deleteState = 0 and state = 0 order by sort asc limit ?
+2026-06-02 17:51:10 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.BoardMapper.selectByNum    : ==> Parameters: 9(Integer)
+2026-06-02 17:51:10 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.BoardMapper.selectByNum    : <==      Total: 9
+2026-06-02 17:51:10 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-2] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:51:10 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-2] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:51:10 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-2] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:51:12 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:51:12 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:51:12 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:51:12 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:51:12 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 22(Integer), 9(Long)
+2026-06-02 17:51:12 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:51:13 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:51:13 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:51:13 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:51:13 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:51:13 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 23(Integer), 9(Long)
+2026-06-02 17:51:13 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:51:19 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.selectByPrimaryKey             : ==>  Preparing: select id, boardId, userId, title, visitCount, replyCount, likeCount, state, deleteState, createTime, updateTime , content from t_article where id = ?
+2026-06-02 17:51:19 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.selectByPrimaryKey             : ==> Parameters: 9(Long)
+2026-06-02 17:51:19 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.selectByPrimaryKey             : <==      Total: 1
+2026-06-02 17:51:19 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET title = ?, updateTime = ?, content = ? where id = ?
+2026-06-02 17:51:19 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 灌水123(String), 2026-06-02 17:51:19.009(Timestamp), 灌水灌水(String), 9(Long)
+2026-06-02 17:51:19 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:51:19  INFO 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.controller.ArticleController   : 修改帖子成功，帖子id = 9, User id = 19
+2026-06-02 17:51:19 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:51:19 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:51:19 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:51:20 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:51:20 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:51:20 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:51:20 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:51:20 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 24(Integer), 9(Long)
+2026-06-02 17:51:20 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:51:23 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:51:23 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:51:23 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:51:23 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:51:23 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 25(Integer), 9(Long)
+2026-06-02 17:51:23 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:51:28 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.selectByPrimaryKey             : ==>  Preparing: select id, boardId, userId, title, visitCount, replyCount, likeCount, state, deleteState, createTime, updateTime , content from t_article where id = ?
+2026-06-02 17:51:28 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.selectByPrimaryKey             : ==> Parameters: 9(Long)
+2026-06-02 17:51:28 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.selectByPrimaryKey             : <==      Total: 1
+2026-06-02 17:51:28 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET title = ?, updateTime = ?, content = ? where id = ?
+2026-06-02 17:51:28 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 灌水123(String), 2026-06-02 17:51:28.558(Timestamp), 灌水灌水321(String), 9(Long)
+2026-06-02 17:51:28 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:51:28  INFO 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.controller.ArticleController   : 修改帖子成功，帖子id = 9, User id = 19
+2026-06-02 17:51:28 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:51:28 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:51:28 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:51:29 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:51:29 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:51:29 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:51:29 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:51:29 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 26(Integer), 9(Long)
+2026-06-02 17:51:29 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:51:30 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:51:30 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:51:30 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:51:30 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:51:30 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 27(Integer), 9(Long)
+2026-06-02 17:51:30 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:51:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.selectByPrimaryKey             : ==>  Preparing: select id, boardId, userId, title, visitCount, replyCount, likeCount, state, deleteState, createTime, updateTime , content from t_article where id = ?
+2026-06-02 17:51:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.selectByPrimaryKey             : ==> Parameters: 9(Long)
+2026-06-02 17:51:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.selectByPrimaryKey             : <==      Total: 1
+2026-06-02 17:51:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET title = ?, updateTime = ?, content = ? where id = ?
+2026-06-02 17:51:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 灌水123(String), 2026-06-02 17:51:43.991(Timestamp), 灌水灌水
+123456(String), 9(Long)
+2026-06-02 17:51:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:51:43  INFO 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.controller.ArticleController   : 修改帖子成功，帖子id = 9, User id = 19
+2026-06-02 17:51:44 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:51:44 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:51:44 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:51:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:51:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:51:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:51:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:51:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 28(Integer), 9(Long)
+2026-06-02 17:51:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:51:46 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:51:46 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:51:46 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:51:46 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:51:46 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 29(Integer), 9(Long)
+2026-06-02 17:51:46 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:51:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-06-02 17:51:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-06-02 17:51:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-06-02 17:51:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 1(Long)
+2026-06-02 17:51:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-06-02 17:51:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-06-02 17:51:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-06-02 17:51:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 1(Long)
+2026-06-02 17:51:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.selectAllByBoardId             : <==      Total: 3
+2026-06-02 17:51:51 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:51:51 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:51:51 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:51:52 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:51:52 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:51:52 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:51:52 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:51:52 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 30(Integer), 9(Long)
+2026-06-02 17:51:52 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:51:56 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:51:56 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:51:56 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:51:56 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:51:56 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 31(Integer), 9(Long)
+2026-06-02 17:51:56 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:52:01 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.selectByPrimaryKey             : ==>  Preparing: select id, boardId, userId, title, visitCount, replyCount, likeCount, state, deleteState, createTime, updateTime , content from t_article where id = ?
+2026-06-02 17:52:01 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.selectByPrimaryKey             : ==> Parameters: 9(Long)
+2026-06-02 17:52:01 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.selectByPrimaryKey             : <==      Total: 1
+2026-06-02 17:52:01 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET title = ?, updateTime = ?, content = ? where id = ?
+2026-06-02 17:52:01 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 灌水123(String), 2026-06-02 17:52:01.623(Timestamp), 灌水灌水
+123456
+23(String), 9(Long)
+2026-06-02 17:52:01 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:52:01  INFO 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.forum.controller.ArticleController   : 修改帖子成功，帖子id = 9, User id = 19
+2026-06-02 17:52:01 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:52:01 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:52:01 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:52:14 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:52:14 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:52:14 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:52:14 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:52:14 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 32(Integer), 9(Long)
+2026-06-02 17:52:14 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:52:35 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.BoardMapper.selectByNum    : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where deleteState = 0 and state = 0 order by sort asc limit ?
+2026-06-02 17:52:35 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.BoardMapper.selectByNum    : ==> Parameters: 9(Integer)
+2026-06-02 17:52:35 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.BoardMapper.selectByNum    : <==      Total: 9
+2026-06-02 17:52:35 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:52:35 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:52:35 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:52:36 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:52:36 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 10(Long)
+2026-06-02 17:52:36 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:52:36 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:52:36 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 8(Integer), 10(Long)
+2026-06-02 17:52:36 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:52:37 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:52:37 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:52:37 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:52:38 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:52:38 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:52:38 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:52:38 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:52:38 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 33(Integer), 9(Long)
+2026-06-02 17:52:38 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:52:39 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:52:39 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:52:39 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:52:39 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:52:39 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 34(Integer), 9(Long)
+2026-06-02 17:52:39 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:52:42 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectByPrimaryKey             : ==>  Preparing: select id, boardId, userId, title, visitCount, replyCount, likeCount, state, deleteState, createTime, updateTime , content from t_article where id = ?
+2026-06-02 17:52:42 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectByPrimaryKey             : ==> Parameters: 9(Long)
+2026-06-02 17:52:42 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectByPrimaryKey             : <==      Total: 1
+2026-06-02 17:52:42 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET title = ?, updateTime = ?, content = ? where id = ?
+2026-06-02 17:52:42 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 灌水123(String), 2026-06-02 17:52:42.879(Timestamp), 灌水灌水
+123456
+23
+123(String), 9(Long)
+2026-06-02 17:52:42 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:52:42  INFO 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.controller.ArticleController   : 修改帖子成功，帖子id = 9, User id = 19
+2026-06-02 17:52:42 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:52:42 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:52:42 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:52:44 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:52:44 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:52:44 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:52:44 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:52:44 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 35(Integer), 9(Long)
+2026-06-02 17:52:44 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:53:27 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.BoardMapper.selectByNum    : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where deleteState = 0 and state = 0 order by sort asc limit ?
+2026-06-02 17:53:27 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.BoardMapper.selectByNum    : ==> Parameters: 9(Integer)
+2026-06-02 17:53:27 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.BoardMapper.selectByNum    : <==      Total: 9
+2026-06-02 17:53:27 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:53:27 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:53:27 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:53:28 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:53:28 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:53:28 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:53:28 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:53:28 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 36(Integer), 9(Long)
+2026-06-02 17:53:28 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:53:29 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:53:29 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:53:29 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:53:29 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:53:29 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 37(Integer), 9(Long)
+2026-06-02 17:53:29 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:53:38 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:53:38 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:53:38 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:53:39 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.BoardMapper.selectByNum    : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where deleteState = 0 and state = 0 order by sort asc limit ?
+2026-06-02 17:53:39 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.BoardMapper.selectByNum    : ==> Parameters: 9(Integer)
+2026-06-02 17:53:39 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.BoardMapper.selectByNum    : <==      Total: 9
+2026-06-02 17:53:39 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:53:39 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:53:39 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:53:40 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:53:40 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:53:40 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:53:40 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:53:40 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 38(Integer), 9(Long)
+2026-06-02 17:53:40 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:53:41 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:53:41 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:53:41 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:53:41 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:53:41 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 39(Integer), 9(Long)
+2026-06-02 17:53:41 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:53:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectByPrimaryKey             : ==>  Preparing: select id, boardId, userId, title, visitCount, replyCount, likeCount, state, deleteState, createTime, updateTime , content from t_article where id = ?
+2026-06-02 17:53:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectByPrimaryKey             : ==> Parameters: 9(Long)
+2026-06-02 17:53:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectByPrimaryKey             : <==      Total: 1
+2026-06-02 17:53:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET title = ?, updateTime = ?, content = ? where id = ?
+2026-06-02 17:53:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 灌水123(String), 2026-06-02 17:53:45.824(Timestamp), 灌水灌水test
+123456
+23
+123(String), 9(Long)
+2026-06-02 17:53:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:53:45  INFO 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.controller.ArticleController   : 修改帖子成功，帖子id = 9, User id = 19
+2026-06-02 17:53:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:53:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:53:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:53:48 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:53:48 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:53:48 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:53:48 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:53:48 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 40(Integer), 9(Long)
+2026-06-02 17:53:48 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-2] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:53:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:53:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:53:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:53:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:53:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 41(Integer), 9(Long)
+2026-06-02 17:53:50 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:53:54 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectByPrimaryKey             : ==>  Preparing: select id, boardId, userId, title, visitCount, replyCount, likeCount, state, deleteState, createTime, updateTime , content from t_article where id = ?
+2026-06-02 17:53:54 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectByPrimaryKey             : ==> Parameters: 9(Long)
+2026-06-02 17:53:54 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.selectByPrimaryKey             : <==      Total: 1
+2026-06-02 17:53:54 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET title = ?, updateTime = ?, content = ? where id = ?
+2026-06-02 17:53:54 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 灌水123test(String), 2026-06-02 17:53:54.828(Timestamp), 灌水灌水test
+123456
+23
+123(String), 9(Long)
+2026-06-02 17:53:54 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:53:54  INFO 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.controller.ArticleController   : 修改帖子成功，帖子id = 9, User id = 19
+2026-06-02 17:53:54 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:53:54 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:53:54 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:53:59 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:53:59 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:53:59 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:53:59 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:53:59 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 42(Integer), 9(Long)
+2026-06-02 17:53:59 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:54:01 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:54:01 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:54:01 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:54:01 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:54:01 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 43(Integer), 9(Long)
+2026-06-02 17:54:01 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:54:02 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-06-02 17:54:02 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 3(Long)
+2026-06-02 17:54:02 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-06-02 17:54:02 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 3(Long)
+2026-06-02 17:54:02 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-06-02 17:54:02 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-06-02 17:54:02 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-06-02 17:54:02 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 3(Long)
+2026-06-02 17:54:03 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-06-02 17:54:03 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:54:03 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:54:03 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:54:04 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-06-02 17:54:04 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where id = ?
+2026-06-02 17:54:04 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 4(Long)
+2026-06-02 17:54:04 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.BoardMapper.selectByPrimaryKey   : ==> Parameters: 4(Long)
+2026-06-02 17:54:04 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-9] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-06-02 17:54:04 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.BoardMapper.selectByPrimaryKey   : <==      Total: 1
+2026-06-02 17:54:04 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectAllByBoardId             : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 and a.boardId = ? order by a.createTime desc limit 0, 100
+2026-06-02 17:54:04 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectAllByBoardId             : ==> Parameters: 4(Long)
+2026-06-02 17:54:04 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.selectAllByBoardId             : <==      Total: 0
+2026-06-02 17:54:06 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-10] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:54:06 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-10] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:54:06 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-10] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:54:07 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:54:07 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 10(Long)
+2026-06-02 17:54:07 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:54:07 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:54:07 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 9(Integer), 10(Long)
+2026-06-02 17:54:07 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-4] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:54:09 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:54:09 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:54:09 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-6] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:54:11 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:54:11 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:54:11 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:54:11 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:54:11 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 44(Integer), 9(Long)
+2026-06-02 17:54:11 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:54:11 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:54:11 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:54:11 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:54:11 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:54:11 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 45(Integer), 9(Long)
+2026-06-02 17:54:11 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:54:15 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.selectByPrimaryKey             : ==>  Preparing: select id, boardId, userId, title, visitCount, replyCount, likeCount, state, deleteState, createTime, updateTime , content from t_article where id = ?
+2026-06-02 17:54:15 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.selectByPrimaryKey             : ==> Parameters: 9(Long)
+2026-06-02 17:54:15 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.selectByPrimaryKey             : <==      Total: 1
+2026-06-02 17:54:15 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET title = ?, updateTime = ?, content = ? where id = ?
+2026-06-02 17:54:15 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 灌水123test(String), 2026-06-02 17:54:15.596(Timestamp), 灌水灌水test
+123456
+23
+123
+123(String), 9(Long)
+2026-06-02 17:54:15 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:54:15  INFO 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.forum.controller.ArticleController   : 修改帖子成功，帖子id = 9, User id = 19
+2026-06-02 17:54:15 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:54:15 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:54:15 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:57:41 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:57:41 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 10(Long)
+2026-06-02 17:57:41 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:57:41 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:57:41 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 10(Integer), 10(Long)
+2026-06-02 17:57:41 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:57:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:57:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:57:43 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-3] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 17:57:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 17:57:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 17:57:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 17:57:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 17:57:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 46(Integer), 9(Long)
+2026-06-02 17:57:45 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-7] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 17:57:46 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 17:57:46 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 17:57:46 DEBUG 30140 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 18:31:05  INFO 30140 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-02 18:31:05  INFO 30140 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-06-02 18:31:05  INFO 30140 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-06-02 18:31:05  INFO 30140 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-06-02 20:04:24  INFO 20392 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Starting ArticleServiceImplTest using Java 17.0.9 with PID 20392 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-06-02 20:04:24 DEBUG 20392 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-02 20:04:24  INFO 20392 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : No active profile set, falling back to 1 default profile: "default"
+2026-06-02 20:04:26  INFO 20392 --- [论坛系统] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-06-02 20:04:27  INFO 20392 --- [论坛系统] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-06-02 20:04:27  INFO 20392 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Started ArticleServiceImplTest in 3.093 seconds (process running for 3.824)
+2026-06-02 20:04:28  INFO 20392 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-02 20:04:28  INFO 20392 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13ae87a6
+2026-06-02 20:04:28  INFO 20392 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-02 20:04:28 DEBUG 20392 --- [论坛系统] [main] c.b.f.d.A.selectByPrimaryKey             : ==>  Preparing: select id, boardId, userId, title, visitCount, replyCount, likeCount, state, deleteState, createTime, updateTime , content from t_article where id = ?
+2026-06-02 20:04:28 DEBUG 20392 --- [论坛系统] [main] c.b.f.d.A.selectByPrimaryKey             : ==> Parameters: 7(Long)
+2026-06-02 20:04:28 DEBUG 20392 --- [论坛系统] [main] c.b.f.d.A.selectByPrimaryKey             : <==      Total: 1
+2026-06-02 20:04:28 DEBUG 20392 --- [论坛系统] [main] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET likeCount = ? where id = ?
+2026-06-02 20:04:28 DEBUG 20392 --- [论坛系统] [main] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 1(Integer), 7(Long)
+2026-06-02 20:04:28 DEBUG 20392 --- [论坛系统] [main] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 20:04:28  INFO 20392 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-02 20:04:28  INFO 20392 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-02 20:04:49  INFO 31380 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Starting ArticleServiceImplTest using Java 17.0.9 with PID 31380 (started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-06-02 20:04:49 DEBUG 31380 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-02 20:04:49  INFO 31380 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : No active profile set, falling back to 1 default profile: "default"
+2026-06-02 20:04:51  INFO 31380 --- [论坛系统] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-06-02 20:04:51  INFO 31380 --- [论坛系统] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-06-02 20:04:51  INFO 31380 --- [论坛系统] [main] c.b.f.s.impl.ArticleServiceImplTest      : Started ArticleServiceImplTest in 3.034 seconds (process running for 3.772)
+2026-06-02 20:04:52  INFO 31380 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-02 20:04:52  INFO 31380 --- [论坛系统] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1293f8d7
+2026-06-02 20:04:52  INFO 31380 --- [论坛系统] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-02 20:04:52 DEBUG 31380 --- [论坛系统] [main] c.b.f.d.A.selectByPrimaryKey             : ==>  Preparing: select id, boardId, userId, title, visitCount, replyCount, likeCount, state, deleteState, createTime, updateTime , content from t_article where id = ?
+2026-06-02 20:04:52 DEBUG 31380 --- [论坛系统] [main] c.b.f.d.A.selectByPrimaryKey             : ==> Parameters: 7(Long)
+2026-06-02 20:04:52 DEBUG 31380 --- [论坛系统] [main] c.b.f.d.A.selectByPrimaryKey             : <==      Total: 1
+2026-06-02 20:04:52 DEBUG 31380 --- [论坛系统] [main] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET likeCount = ? where id = ?
+2026-06-02 20:04:52 DEBUG 31380 --- [论坛系统] [main] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 2(Integer), 7(Long)
+2026-06-02 20:04:52 DEBUG 31380 --- [论坛系统] [main] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 20:04:52  INFO 31380 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-02 20:04:52  INFO 31380 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-02 20:08:14  INFO 34072 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 34072 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-06-02 20:08:14 DEBUG 34072 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-02 20:08:14  INFO 34072 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-06-02 20:08:14  INFO 34072 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-02 20:08:14  INFO 34072 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-02 20:08:15  INFO 34072 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-06-02 20:08:15  INFO 34072 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-02 20:08:15  INFO 34072 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-02 20:08:15  INFO 34072 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-02 20:08:15  INFO 34072 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 929 ms
+2026-06-02 20:08:15  INFO 34072 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-06-02 20:08:16  INFO 34072 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-06-02 20:08:16  INFO 34072 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-06-02 20:08:16  INFO 34072 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-06-02 20:08:16  INFO 34072 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 2.036 seconds (process running for 2.379)
+2026-06-02 20:08:16  INFO 34072 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-02 20:08:16  INFO 34072 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-02 20:08:16  INFO 34072 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-02 20:08:16  INFO 34072 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-02 20:08:16  INFO 34072 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31a85378
+2026-06-02 20:08:16  INFO 34072 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-02 20:08:31 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-06-02 20:08:31 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-06-02 20:08:31 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-06-02 20:08:31  INFO 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-06-02 20:08:31 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.BoardMapper.selectByNum    : ==>  Preparing: select id, name, articleCount, sort, state, deleteState, createTime, updateTime from t_board where deleteState = 0 and state = 0 order by sort asc limit ?
+2026-06-02 20:08:31 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.BoardMapper.selectByNum    : ==> Parameters: 9(Integer)
+2026-06-02 20:08:31 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-4] c.b.forum.dao.BoardMapper.selectByNum    : <==      Total: 9
+2026-06-02 20:08:31 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 20:08:31 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 20:08:31 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 20:08:35 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 20:08:35 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 9(Long)
+2026-06-02 20:08:35 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 20:08:35 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 20:08:35 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 47(Integer), 9(Long)
+2026-06-02 20:08:35 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 20:08:36 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 20:08:36 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 20:08:36 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 20:08:38 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 20:08:38 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 10(Long)
+2026-06-02 20:08:38 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 20:08:38 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 20:08:38 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 11(Integer), 10(Long)
+2026-06-02 20:08:38 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-10] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 20:08:44 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 20:08:44 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 20:08:44 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-5] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 20:08:46 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.ArticleMapper.selectDetailById   : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, u.gender as u_gender, u.isAdmin as u_isAdmin, u.state as u_state, u.deleteState as u_deleteState, b.id as b_id, b.name as b_name, b.state as b_state, b.deleteState as b_deleteState, a.id, a.boardId, a.userId, a.title, a.content, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u, t_board b where a.userId = u.id and a.boardId = b.id and a.deleteState = 0 and a.id = ?
+2026-06-02 20:08:46 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.ArticleMapper.selectDetailById   : ==> Parameters: 10(Long)
+2026-06-02 20:08:46 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.ArticleMapper.selectDetailById   : <==      Total: 1
+2026-06-02 20:08:46 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET visitCount = ? where id = ?
+2026-06-02 20:08:46 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 12(Integer), 10(Long)
+2026-06-02 20:08:46 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-1] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 20:08:53 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : ==>  Preparing: select u.id as u_id, u.avatarUrl as u_avatarUrl, u.nickname as u_nickname, a.id, a.boardId, a.userId, a.title, a.visitCount, a.replyCount, a.likeCount, a.state, a.createTime, a.updateTime from t_article a, t_user u where a.userId = u.id and a.deleteState = 0 order by a.createTime desc limit 0, 100
+2026-06-02 20:08:53 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : ==> Parameters: 
+2026-06-02 20:08:53 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-8] c.b.forum.dao.ArticleMapper.selectAll    : <==      Total: 4
+2026-06-02 20:08:57  INFO 34072 --- [论坛系统] [http-nio-58080-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 188 ms
+2026-06-02 20:09:11 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.dao.UserMapper.selectByUserName    : ==>  Preparing: select id, username, password, nickname, phoneNum, email, gender, salt, avatarUrl, articleCount, isAdmin, remark, state, deleteState, createTime, updateTime from t_user where username = ?
+2026-06-02 20:09:11 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.dao.UserMapper.selectByUserName    : ==> Parameters: test(String)
+2026-06-02 20:09:11 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-6] c.b.f.dao.UserMapper.selectByUserName    : <==      Total: 1
+2026-06-02 20:09:11  INFO 34072 --- [论坛系统] [http-nio-58080-exec-6] c.b.forum.service.impl.UserServiceImpl   : 用户登录成功. username = test
+2026-06-02 20:09:19 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.selectByPrimaryKey             : ==>  Preparing: select id, boardId, userId, title, visitCount, replyCount, likeCount, state, deleteState, createTime, updateTime , content from t_article where id = ?
+2026-06-02 20:09:19 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.selectByPrimaryKey             : ==> Parameters: 7(Long)
+2026-06-02 20:09:19 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.selectByPrimaryKey             : <==      Total: 1
+2026-06-02 20:09:19 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==>  Preparing: update t_article SET likeCount = ? where id = ?
+2026-06-02 20:09:19 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : ==> Parameters: 2(Integer), 7(Long)
+2026-06-02 20:09:19 DEBUG 34072 --- [论坛系统] [http-nio-58080-exec-5] c.b.f.d.A.updateByPrimaryKeySelective    : <==    Updates: 1
+2026-06-02 20:11:03  INFO 34072 --- [论坛系统] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-02 20:11:03  INFO 34072 --- [论坛系统] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-06-02 20:11:03  INFO 34072 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-02 20:11:03  INFO 34072 --- [论坛系统] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-02 20:11:04  INFO 19972 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Starting ForumApplication using Java 17.0.9 with PID 19972 (D:\项目学习Java\论坛系统\forum\forum\target\classes started by liangyuanzhang in D:\项目学习Java\论坛系统\forum\forum)
+2026-06-02 20:11:04 DEBUG 19972 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-02 20:11:04  INFO 19972 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-06-02 20:11:04  INFO 19972 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-02 20:11:04  INFO 19972 --- [论坛系统] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-02 20:11:05  INFO 19972 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 58080 (http)
+2026-06-02 20:11:05  INFO 19972 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-02 20:11:05  INFO 19972 --- [论坛系统] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-02 20:11:05  INFO 19972 --- [论坛系统] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-02 20:11:05  INFO 19972 --- [论坛系统] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 968 ms
+2026-06-02 20:11:06  INFO 19972 --- [论坛系统] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-06-02 20:11:06  INFO 19972 --- [论坛系统] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-06-02 20:11:06  INFO 19972 --- [论坛系统] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-06-02 20:11:06  INFO 19972 --- [论坛系统] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58080 (http) with context path '/'
+2026-06-02 20:11:06  INFO 19972 --- [论坛系统] [restartedMain] com.bite.forum.ForumApplication          : Started ForumApplication in 2.07 seconds (process running for 2.395)
+2026-06-02 20:11:06  INFO 19972 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-02 20:11:06  INFO 19972 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-02 20:11:06  INFO 19972 --- [论坛系统] [RMI TCP Connection(1)-169.254.179.233] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-02 20:11:06  INFO 19972 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-02 20:11:07  INFO 19972 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7726e6a5
+2026-06-02 20:11:07  INFO 19972 --- [论坛系统] [RMI TCP Connection(2)-169.254.179.233] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-02 20:11:11  INFO 19972 --- [论坛系统] [http-nio-58080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 205 ms
