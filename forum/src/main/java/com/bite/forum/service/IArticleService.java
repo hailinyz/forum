@@ -40,4 +40,11 @@ public interface IArticleService {
      */
     void thumbsUpById(Long id);
 
+    /*
+    根据Id删除帖⼦
+     */
+    @Transactional // 事务管理
+    void deleteById (Long id);
+
+
 }

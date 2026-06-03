@@ -42,4 +42,12 @@ class BoardServiceImplTest {
         Board board = boardService.selectById(10L);
         System.out.println(objectMapper.writeValueAsString(board)); // 将board对象转为json字符串然后输出
     }
+
+    @Transactional
+    @Test
+    void subOneArticleCountById() {
+        System.out.println("更新前，当前板块下的贴子数为：" + boardService.selectById(1L).getArticleCount());
+        boardService.subOneArticleCountById(1L);
+        System.out.println("更新后，当前板块下的贴子数为：" + boardService.selectById(1L).getArticleCount());
+    }
 }

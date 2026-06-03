@@ -238,13 +238,44 @@ public class ArticleServiceImpl implements IArticleService {
     }
 
 
-
-
-
-
-
-
-
+    /*
+    根据Id删除帖⼦
+     */
+    @Override
+    public void deleteById(Long id) {
+        //非空校验
+        if (id == null || id <= 0) {
+            //打印日志
+            log.warn(ResultCode.ERROR_IS_NULL.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.ERROR_IS_NULL));
+        }
+        //根据id查询帖子信息
+        Article article = articleMapper.selectByPrimaryKey(id);
+        if (article == null || article.getDeleteState() == 1) {
+            //打印日志
+            log.warn(ResultCode.FAILED_ARTICLE_NOT_EXISTS.toString() + "article id = " + id);
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_ARTICLE_NOT_EXISTS));
+        }
+        //构建需要更新的帖子对象
+        Article updateArticle = new Article();
+        updateArticle.setId(article.getId());
+        updateArticle.setDeleteState((byte) 1);
+        int updateRow = articleMapper.updateByPrimaryKeySelective(updateArticle);
+        if (updateRow != 1) {
+            //打印日志
+            log.warn(ResultCode.ERROR_SERVICES.toString() + "article id = " + id);
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.ERROR_SERVICES));
+        }
+        //更新板块帖子数(版块中的帖⼦数量 -1)
+        boradService.subOneArticleCountById(article.getBoardId());
+        //更新用户帖子数(用户中的帖⼦数量 -1)
+        userService.subOneArticleCountById(article.getUserId());
+        //打印日志
+        log.info(ResultCode.SUCCESS.toString() + "被删除的article id = " + id);
+    }
 
 
 }

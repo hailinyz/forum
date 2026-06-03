@@ -65,4 +65,12 @@ class UserServiceImplTest {
         userService.addOneArticleCountById(1L);
         System.out.println(userService.selectById(1L));
     }
+
+    @Transactional
+    @Test
+    void subOneArticleCountById() {
+        System.out.println("更新前，当前用户的贴子数为：" + userService.selectById(1L).getArticleCount());
+        userService.subOneArticleCountById(1L);
+        System.out.println("更新后，当前用户的贴子数为：" + userService.selectById(1L).getArticleCount());
+    }
 }

@@ -457,7 +457,8 @@
               icon: 'success'
             });
             // 成功后，修改点赞个数 currentArticle.likeCount = currentArticle.likeCount + 1;
-            currentArticle.likeCount = respData.data.likeCount;
+             currentArticle.likeCount = currentArticle.likeCount + 1;
+             $('#details_article_likeCount').html(currentArticle.likeCount);
           } else {
             $.toast({
               heading: '警告',

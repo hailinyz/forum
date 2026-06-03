@@ -34,5 +34,9 @@ public interface IUserService {
      */
     void addOneArticleCountById(Long id);
 
+    /*
+    ⽤⼾发帖数 -1
+     */
+    void subOneArticleCountById (Long id);
 
 }

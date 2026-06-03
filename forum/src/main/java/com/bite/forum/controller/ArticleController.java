@@ -172,6 +172,33 @@ public class ArticleController {
         return AppResult.success();
     }
 
+    /*
+    * 删除帖子
+     */
+    @Operation(summary = "删除帖子")
+    @PostMapping("/delete")
+    public AppResult delete(HttpServletRequest request, Long id) {
+        //获取当前用户
+        HttpSession session = request.getSession(false);
+        User user = (User) session.getAttribute(AppConfig.USER_SESSION);
+        //判断当前用户是否被禁言
+        if (user.getState() == 1) { //表示用户已被禁言
+            return AppResult.failed(ResultCode.FAILED_USER_BANNED);
+        }
+        //判断帖子是否存在
+        Article article = articleService.selectById(id);
+        if (article == null) {
+            return AppResult.failed(ResultCode.FAILED_ARTICLE_NOT_EXISTS);
+        }
+        //判断当前用户是否是作者
+        if (user.getId() != article.getUserId()) {
+            return AppResult.failed(ResultCode.FAILED_FORBIDDEN);
+        }
+        //删除帖子
+        articleService.deleteById(id);
+        return AppResult.success();
+    }
+
 
 
 

@@ -73,4 +73,17 @@ class ArticleServiceImplTest {
         articleService.thumbsUpById(7L);
         System.out.println("点赞成功");
     }
+
+    @Transactional
+    @Test
+    void deleteById() throws JsonProcessingException {
+        System.out.println("删除前");
+        System.out.println(objectMapper.writeValueAsString(articleService.selectById(7L)));
+        System.out.println("删除后");
+        articleService.deleteById(7L);
+        System.out.println(objectMapper.writeValueAsString(articleService.selectById(7L)));
+    }
+
+
+
 }
