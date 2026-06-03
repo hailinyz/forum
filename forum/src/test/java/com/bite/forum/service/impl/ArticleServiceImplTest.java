@@ -1,6 +1,7 @@
 package com.bite.forum.service.impl;
 
 import com.bite.forum.model.Article;
+import com.bite.forum.model.ArticleReply;
 import com.bite.forum.service.IArticleService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -20,6 +21,7 @@ class ArticleServiceImplTest {
 
     @Resource
     private ObjectMapper objectMapper;
+
 
     @Transactional
     @Test
@@ -64,7 +66,7 @@ class ArticleServiceImplTest {
     @Test
     void selectById() throws JsonProcessingException {
         Article article = articleService.selectById(7L);
-        System.out.println(objectMapper.writeValueAsString( article));
+        System.out.println(objectMapper.writeValueAsString(article));
     }
 
     @Transactional
@@ -84,6 +86,23 @@ class ArticleServiceImplTest {
         System.out.println(objectMapper.writeValueAsString(articleService.selectById(7L)));
     }
 
+//    @Transactional
+    @Test
+    void testCreate() throws JsonProcessingException {
+        ArticleReply articleReply = new ArticleReply();
+        articleReply.setArticleId(15L);
+        articleReply.setPostUserId(1L);
+        articleReply.setReplyUserId(1L);
+        articleReply.setReplyId(1L);
+        articleReply.setContent("这是一条测试回复");
 
+        articleService.create(articleReply);
 
+        System.out.println("回复创建成功，ID: " + articleReply.getId());
+
+        Article article = articleService.selectById(15L);
+        System.out.println("帖子回复数: " + article.getReplyCount());
+        System.out.println(objectMapper.writeValueAsString(articleReply));
+    }
 }
+

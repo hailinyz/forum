@@ -1,6 +1,7 @@
 package com.bite.forum.service;
 
 import com.bite.forum.model.Article;
+import com.bite.forum.model.ArticleReply;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -45,6 +46,12 @@ public interface IArticleService {
      */
     @Transactional // 事务管理
     void deleteById (Long id);
+
+    /*
+    新增回复
+     */
+    @Transactional
+    void create(ArticleReply articleReply);
 
 
 }

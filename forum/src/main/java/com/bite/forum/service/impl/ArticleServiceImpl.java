@@ -3,8 +3,10 @@ package com.bite.forum.service.impl;
 import com.bite.forum.common.AppResult;
 import com.bite.forum.common.ResultCode;
 import com.bite.forum.dao.ArticleMapper;
+import com.bite.forum.dao.ArticleReplyMapper;
 import com.bite.forum.exception.ApplicationException;
 import com.bite.forum.model.Article;
+import com.bite.forum.model.ArticleReply;
 import com.bite.forum.model.Board;
 import com.bite.forum.model.User;
 import com.bite.forum.service.IArticleService;
@@ -24,6 +26,9 @@ public class ArticleServiceImpl implements IArticleService {
 
     @Resource
     private ArticleMapper articleMapper;
+
+    @Resource
+    private ArticleReplyMapper articleReplyMapper;
 
     @Resource
     private IUserService userService; ;
@@ -276,6 +281,69 @@ public class ArticleServiceImpl implements IArticleService {
         //打印日志
         log.info(ResultCode.SUCCESS.toString() + "被删除的article id = " + id);
     }
+
+
+    /*
+    新增回复
+     */
+    @Override
+    public void create(ArticleReply articleReply) {
+        //非空校验
+        if (articleReply == null || articleReply.getArticleId() == null){
+            //打印日志
+            log.warn(ResultCode.FAILED_PARAMS_VALIDATE.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_PARAMS_VALIDATE));
+        }
+        //查询帖子信息
+        Article article = articleMapper.selectByPrimaryKey(articleReply.getArticleId());
+        if (article == null) {
+            //打印日志
+            log.warn(ResultCode.FAILED_ARTICLE_NOT_EXISTS.toString() + "article id = " + articleReply.getArticleId());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_ARTICLE_NOT_EXISTS));
+        }
+        //对帖子进行校验
+        if (article.getDeleteState() != 0 || article.getState() != 0) { //帖子被删除或者被禁言
+            //打印日志
+            log.warn(ResultCode.FAILED_ARTICLE_BANNED.toString() + "article id = " + articleReply.getArticleId());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_ARTICLE_BANNED));
+        }
+        //填充默认数据
+        articleReply.setState((byte) 0); // 状态
+        articleReply.setDeleteState((byte) 0); // 是否状态
+        articleReply.setLikeCount(0); // 点赞数量
+        // 时间
+        Date date = new Date();
+        articleReply.setCreateTime(date); // 创建时间
+        articleReply.setUpdateTime(date); // 更新时间
+        //写入回复数据
+        int row = articleReplyMapper.insertSelective(articleReply);
+        if (row != 1) {
+            //打印日志
+            log.warn(ResultCode.FAILED_CREATE.toString() + "articleReply id = " + articleReply.getId());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_CREATE));
+        }
+        //更新帖子回复数
+        Article updateArticle = new Article();
+        updateArticle.setId(article.getId());
+        updateArticle.setReplyCount(article.getReplyCount() + 1);
+        int updateRow = articleMapper.updateByPrimaryKeySelective(updateArticle);
+        if (updateRow != 1) {
+            //打印日志
+            log.warn(ResultCode.FAILED_CREATE.toString() + "article id = " + article.getId());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_CREATE));
+        }
+    }
+
+
+
+
+
+
 
 
 }

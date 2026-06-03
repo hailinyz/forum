@@ -9,17 +9,17 @@ import java.util.Date;
 public class ArticleReply {
     private Long id;
 
-    private Long articleId;
+    private Long articleId; // 帖子Id
 
-    private Long postUserId;
+    private Long postUserId; // 发帖人
 
-    private Long replyId;
+    private Long replyId; // 回复Id
 
-    private Long replyUserId;
+    private Long replyUserId; // 回复人
 
-    private String content;
+    private String content; // 回复内容
 
-    private Integer likeCount;
+    private Integer likeCount; // 点赞数
 
     private Byte state;
 

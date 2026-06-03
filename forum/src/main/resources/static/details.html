@@ -509,7 +509,32 @@
     // url: 'article/delete?id=' + $('#details_article_id').val()
     $('#details_artile_delete').click(function () {
       $.ajax({
-        
+        type: 'post',
+        url: 'article/delete?id=' + $('#details_article_id').val(),
+        success: function(respData) {
+          if(respData.code == 0 ) {
+            // 初始化⻚⾯内容
+            changeNavActive($('#nav-link-title'));
+            $.toast({
+              heading: '成功',
+              text: '删除成功',
+              icon: 'success'
+            });
+          } else {
+            $.toast({
+              heading: '警告',
+              text: '删除失败',
+              icon: 'warning'
+            });
+          }
+        },
+        error: function(){
+            $.toast({
+              heading: '错误',
+              text: '发生错误',
+              icon: 'error'
+            });
+        }
 
       });
 
