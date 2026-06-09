@@ -1,8 +1,5 @@
 package com.bite.forum.service.impl;
 
-import com.bite.forum.dao.ArticleMapper;
-import com.bite.forum.dao.ArticleReplyMapper;
-import com.bite.forum.model.Article;
 import com.bite.forum.model.ArticleReply;
 import com.bite.forum.service.IArticleReplyService;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -21,12 +18,8 @@ class ArticleReplyServiceImplTest {
     private IArticleReplyService articleReplyService;
     @Resource
     private ObjectMapper objectMapper;
-    @Resource
-    private ArticleMapper articleMapper;
-    @Resource
-    private ArticleReplyMapper articleReplyMapper;
 
-//    @Transactional
+    @Transactional
     @Test
     void create_Success() throws JsonProcessingException {
         ArticleReply articleReply = new ArticleReply();
@@ -34,7 +27,7 @@ class ArticleReplyServiceImplTest {
         articleReply.setPostUserId(1L);
         articleReply.setReplyId(1L);
         articleReply.setReplyUserId(1L);
-        articleReply.setContent("测试2");
+        articleReply.setContent("测试6");
         articleReplyService.create(articleReply);
         System.out.println(objectMapper.writeValueAsString(articleReply));
     }
