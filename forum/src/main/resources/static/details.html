@@ -339,7 +339,26 @@
     // 成功后，调用buildArticleReply()方法构建回复列表
     function loadArticleDetailsReply() {
       $.ajax({
-        
+        type: 'get',
+        url: 'articlReply/articlReply?articleId=' + currentArticle.id,
+        success: function (respData) {
+          if (respData.code == 0) {
+            buildArticleReply(respData.data);
+          } else {
+            $.toast({
+              heading: '警告',
+              text: respData.message,
+              icon: 'warning'
+            });
+          }
+        },
+        error: function () {
+          $.toast({
+            heading: '错误',
+            text: '获取回复列表失败',
+            icon: 'error'
+          });
+        }
       });
     }
     // 

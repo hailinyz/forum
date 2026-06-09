@@ -83,7 +83,7 @@ public class ArticleReplyController {
     /*
     * 根据帖子Id查询帖⼦对应的回复
      */
-    @GetMapping("/getReplies")
+    @GetMapping("/articlReply")
     @Operation(summary = "根据帖子Id查询帖⼦对应的回复")
     public AppResult<List<ArticleReply>> getRepliesByArticleId(Long articleId) {
         //查询帖子是否存在
