@@ -175,7 +175,7 @@ public class ArticleController {
     /*
     * 删除帖子
      */
-    @Operation(summary = "删除帖子")
+    @Operation(summary = "删除帖子wolaile")
     @PostMapping("/delete")
     public AppResult delete(HttpServletRequest request, Long id) {
         //获取当前用户
