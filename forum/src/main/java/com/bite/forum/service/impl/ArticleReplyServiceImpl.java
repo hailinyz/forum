@@ -13,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 @Slf4j
@@ -75,7 +76,22 @@ public class ArticleReplyServiceImpl implements IArticleReplyService {
         }
     }
 
-
+    /*
+        根据帖子Id查询帖⼦对应的回复
+         */
+    @Override
+    public List<ArticleReply> selectByArticleId(Long articleId) {
+        //非空校验
+        if (articleId == null) {
+            //打印日志
+            log.warn(ResultCode.ERROR_IS_NULL.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.ERROR_IS_NULL));
+        }
+        //直接调用Mapper
+        List<ArticleReply> result = articleReplyMapper.selectByArticleId(articleId);
+        return result;
+    }
 
 
 

@@ -2,6 +2,7 @@ package com.bite.forum.service.impl;
 
 import com.bite.forum.model.Article;
 import com.bite.forum.model.ArticleReply;
+import com.bite.forum.service.IArticleReplyService;
 import com.bite.forum.service.IArticleService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,6 +16,9 @@ import java.util.List;
 
 @SpringBootTest
 class ArticleServiceImplTest {
+
+    @Resource
+    private IArticleReplyService articleReplyService;
 
     @Resource
     private IArticleService articleService;
@@ -103,6 +107,12 @@ class ArticleServiceImplTest {
         Article article = articleService.selectById(15L);
         System.out.println("帖子回复数: " + article.getReplyCount());
         System.out.println(objectMapper.writeValueAsString(articleReply));
+    }
+
+    @Test
+    void selectByArticleId() throws JsonProcessingException {
+        List<ArticleReply> articleReplies = articleReplyService.selectByArticleId(15L);
+        System.out.println(objectMapper.writeValueAsString(articleReplies));
     }
 }
 

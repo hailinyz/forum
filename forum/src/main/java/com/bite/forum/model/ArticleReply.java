@@ -1,7 +1,6 @@
 package com.bite.forum.model;
 
 import lombok.Data;
-import org.apache.ibatis.annotations.Mapper;
 
 import java.util.Date;
 
@@ -28,4 +27,8 @@ public class ArticleReply {
     private Date createTime;
 
     private Date updateTime;
+
+    //关联对象-作者
+    private User user;
+
 }

@@ -23,9 +23,11 @@ public class User {
     @Schema(description = "昵称")
     private String nickname;
 
+    @JsonInclude(JsonInclude.Include.ALWAYS)
     @Schema(description = "手机号码")
     private String phoneNum;
 
+    @JsonInclude(JsonInclude.Include.ALWAYS)
     @Schema(description = "邮箱地址")
     private String email;
 

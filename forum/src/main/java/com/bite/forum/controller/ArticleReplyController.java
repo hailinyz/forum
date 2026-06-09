@@ -3,6 +3,7 @@ package com.bite.forum.controller;
 import com.bite.forum.common.AppResult;
 import com.bite.forum.common.ResultCode;
 import com.bite.forum.config.AppConfig;
+import com.bite.forum.dao.ArticleMapper;
 import com.bite.forum.model.Article;
 import com.bite.forum.model.ArticleReply;
 import com.bite.forum.model.User;
@@ -15,9 +16,12 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @Tag(name = "回复接口")
@@ -30,6 +34,9 @@ public class ArticleReplyController {
 
     @Resource
     private IArticleService articleService;
+
+    @Resource
+    private ArticleMapper articleMapper;
 
 
     /*
@@ -71,5 +78,29 @@ public class ArticleReplyController {
         //返回结果
         return AppResult.success();
     }
+
+
+    /*
+    * 根据帖子Id查询帖⼦对应的回复
+     */
+    @GetMapping("/getReplies")
+    @Operation(summary = "根据帖子Id查询帖⼦对应的回复")
+    public AppResult<List<ArticleReply>> getRepliesByArticleId(Long articleId) {
+        //查询帖子是否存在
+        Article article = articleMapper.selectByPrimaryKey(articleId);
+        if (article == null || article.getDeleteState() == 1) {
+            log.warn(ResultCode.FAILED_ARTICLE_NOT_EXISTS.toString());
+            return AppResult.failed(ResultCode.FAILED_ARTICLE_NOT_EXISTS);
+        }
+        //调用业务层--查询结果
+        List<ArticleReply> result = articleReplyService.selectByArticleId(articleId);
+
+        return AppResult.success(result);
+    }
+
+
+
+
+
 
 }

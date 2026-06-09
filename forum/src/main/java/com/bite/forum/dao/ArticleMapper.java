@@ -1,6 +1,7 @@
 package com.bite.forum.dao;
 
 import com.bite.forum.model.Article;
+import com.bite.forum.model.ArticleReply;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -33,6 +34,7 @@ public interface ArticleMapper {
     根据板块ID查询指定板块的帖子详情
      */
     Article selectDetailById(Long id);
+
 
 
 }
