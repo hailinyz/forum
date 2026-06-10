@@ -579,7 +579,28 @@
     // 成功后，调用buildMessageList() 方法构建站内信列表
     function requestMessageList () {
       $.ajax({
-        
+        type: 'GET',
+        url: 'message/getAll',
+        success:function (respData) { 
+          if (respData.code == 0) {
+            // 构建站内信列表
+            buildMessageList(respData.data);
+          } else {
+            // 提⽰
+            $.toast({
+              heading: '提⽰',
+              text: '⽆法获取站内信，请联系统管理员',
+              icon: 'info'
+            });
+          }
+          },
+          error: function () {
+          $.toast({
+            heading: '错误',
+            text: '出错了，请联系管理员',
+            icon: 'error'
+          });
+        },
       });
     }
     requestMessageList();

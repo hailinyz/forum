@@ -43,4 +43,17 @@ class MessageServiceImplTest {
         List<Message> result = messageService.selectByReceiveUserId(19L);
         System.out.println(objectMapper.writeValueAsString(result));
     }
+
+    @Test
+    void selectById() {
+        Message message = messageService.selectById(3L);
+        System.out.println(message);
+    }
+
+    @Transactional
+    @Test
+    void updateStateById() {
+        messageService.updateStateById(3L, (byte) 0);
+        System.out.println("更新成功");
+    }
 }

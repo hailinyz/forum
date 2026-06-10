@@ -95,6 +95,47 @@ public class MessageServiceImpl implements IMessageService {
         return result;
     }
 
+    /*
+    根据id查询站内信
+     */
+    @Override
+    public Message selectById(Long id) {
+        //非空校验
+        if (id == null){
+            //打印日志
+            log.info(ResultCode.FAILED_PARAMS_VALIDATE.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_PARAMS_VALIDATE));
+        }
+        Message result = messageMapper.selectByPrimaryKey(id);
+        return result;
+    }
+
+    /*
+    更新站内信状态
+     */
+    @Override
+    public void updateStateById(Long id, Byte state) {
+        //非空校验
+        if (id == null || state == null){
+            //打印日志
+            log.info(ResultCode.FAILED_PARAMS_VALIDATE.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_PARAMS_VALIDATE));
+        }
+        //构建更新对象
+        Message message = new Message();
+        message.setId(id);
+        message.setState(state);
+        int row = messageMapper.updateByPrimaryKeySelective(message);
+        if (row != 1) {
+            //打印日志
+            log.info(ResultCode.ERROR_SERVICES.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.ERROR_SERVICES));
+        }
+    }
+
 
 
 

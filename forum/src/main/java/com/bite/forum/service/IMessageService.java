@@ -22,4 +22,15 @@ public interface IMessageService {
     根据接收这ids查询所有站内信
      */
     List<Message> selectByReceiveUserId (Long receiveUserId);
+
+    /*
+    根据id获取站内信
+     */
+    Message selectById(Long id);
+
+    /**
+     * 根据Id更新
+     */
+    void updateStateById(Long id, Byte state);
+
 }

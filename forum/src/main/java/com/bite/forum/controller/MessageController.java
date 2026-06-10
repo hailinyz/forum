@@ -94,6 +94,26 @@ public class MessageController {
     }
 
 
+    @Operation(summary = "更新状态为已读")
+    @PostMapping("/markRead")
+    public AppResult markRead(HttpServletRequest request, Long id){
+        //根据id获取站内信内容
+        Message message = messageService.selectById(id);
+        //获取当前用户信息
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute(AppConfig.USER_SESSION);
+        //接收方不属于自己
+        if (message != null && user.getId() != message.getReceiveUserId()) {
+            // 打印⽇志
+            log.warn("查询了不属于⾃⼰的站内信：userId = " + user.getId() + ",  receiveUserId = " + message.getReceiveUserId());
+                    // 返回错误结果
+            return AppResult.failed(ResultCode.FAILED);
+        }
+        //更新状态为已读
+        messageService.updateStateById(id, (byte)1);
+        return AppResult.success();
+    }
+
 
 
 
