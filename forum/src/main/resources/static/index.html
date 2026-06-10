@@ -679,6 +679,28 @@
           // 复位接钮显示 
           $('#btn_index_message_reply').show();
           $('#btn_index_send_message_reply').hide();
+          // 发送请求，更新状态为已读
+          if (messageItem.state == 0 && statusDotEl.hasClass('status-dot-animated bg-red')) {
+              $.ajax({
+                  type: 'post',
+                  url: 'message/markRead',
+                  contentType: 'application/x-www-form-urlencoded',
+                  data: {
+                      id: messageItem.id
+                  },
+                  // 成功回调
+                  success: function (respData) {
+                      if (respData.code == 0) {
+                          // 更新页面显示效果和messageItem.state
+                          statusDotEl.removeClass('status-dot-animated bg-red');
+                          // 修改未读为已读
+                          statusDescEl.html('[已读]');
+                          // 修改本地的对象状态属性
+                          messageItem.state = 1;
+                      }
+                  }
+              });
+          }
 
         });
 
