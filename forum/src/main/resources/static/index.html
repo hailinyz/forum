@@ -769,7 +769,32 @@
       // // 清空输入区
       // cleanMessageReplyForm ();
       $.ajax ({
-        
+        type: 'post',
+        url: 'message/reply',
+        contentType: 'application/x-www-form-urlencoded',
+        data: postData,
+        success: function (respData) { 
+          if (respData.code == 0) {
+            // 刷新未读标识和站内信列表
+            requestMessageUnreadCount();
+            requestMessageList();
+            // 清空输入区
+            cleanMessageReplyForm();
+          } else {
+            $.toast({
+              heading: '警告',
+              text: '回复失败',
+              icon: 'warning'
+            });
+          }
+        },
+        error: function () {
+          $.toast({
+            heading: '错误',
+            text: '访问出现问题，请与管理员联系.',
+            icon: 'error'
+          });
+        }
       });
 
 

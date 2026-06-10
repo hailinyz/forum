@@ -1,6 +1,7 @@
 package com.bite.forum.service;
 
 import com.bite.forum.model.Message;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -32,5 +33,14 @@ public interface IMessageService {
      * 根据Id更新
      */
     void updateStateById(Long id, Byte state);
+
+    /**
+     * 回复站内信
+     * @param repliedId 被回复的站内信Id
+     * @param message 回复内容
+     */
+    @Transactional
+    void reply (Long repliedId, Message message);
+
 
 }

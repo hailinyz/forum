@@ -56,4 +56,14 @@ class MessageServiceImplTest {
         messageService.updateStateById(3L, (byte) 0);
         System.out.println("更新成功");
     }
+
+    @Test
+    void reply() {
+        Message message = new Message();
+        message.setPostUserId(1L);
+        message.setReceiveUserId(19L);
+        message.setContent("回复测试");
+        messageService.reply(3L, message);
+        System.out.println("回复成功");
+    }
 }

@@ -115,6 +115,39 @@ public class MessageController {
     }
 
 
+    @Operation(summary = "回复站内信")
+    @PostMapping("/reply")
+    public AppResult reply(HttpServletRequest request, Long repliedId, String content){
+        //检查当前登录用状态
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute(AppConfig.USER_SESSION);
+        if (user.getState() == 1){
+            //打印日志
+            log.info(ResultCode.FAILED_USER_BANNED.toString());
+            //返回错误信息(一般不在Controller抛异常，只在Service抛异常)
+            return AppResult.failed(ResultCode.FAILED_USER_BANNED);
+        }
+        //获取被回复的站内信
+        Message existsMessage = messageService.selectById(repliedId);
+        if (existsMessage == null || existsMessage.getDeleteState() == 1){
+            //打印日志
+            log.warn(ResultCode.FAILED_MESSAGE_NOT_EXISTS.toString());
+            return AppResult.failed(ResultCode.FAILED_MESSAGE_NOT_EXISTS);
+        }
+        //不能回复自己
+        if (user.getId() == existsMessage.getPostUserId()){
+            return AppResult.failed("不能回复自己. postUserId = " + user.getId() + ",  receiveUserId = " + existsMessage.getPostUserId());
+        }
+        //构建回复
+        Message message = new Message();
+        message.setPostUserId(user.getId());
+        message.setReceiveUserId(existsMessage.getPostUserId());
+        message.setContent(content);
+        messageService.reply(repliedId, message);
+        return AppResult.success();
+    }
+
+
 
 
 
