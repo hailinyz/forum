@@ -64,8 +64,22 @@ public class MessageServiceImpl implements IMessageService {
 
 
 
-
-
+    /*
+    查询未读消息数量
+     */
+    @Override
+    public Integer selectUnreadCount(Long userId) {
+        //非空校验
+        if (userId == null){
+            //打印日志
+            log.info(ResultCode.FAILED_PARAMS_VALIDATE.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_PARAMS_VALIDATE));
+        }
+        //查询未读消息数量
+        Integer count = messageMapper.selectUnreadCount(userId);
+        return count;
+    }
 
 
 

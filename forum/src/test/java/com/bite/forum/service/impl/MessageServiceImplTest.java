@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class MessageServiceImplTest {
@@ -29,5 +28,11 @@ class MessageServiceImplTest {
         message.setContent("测试"); // 内容
         messageService.create(message); // 创建消息
         System.out.println(objectMapper.writeValueAsString(message)); // 打印消息
+    }
+
+    @Test
+    void selectUnreadCount() throws JsonProcessingException {
+        Integer count = messageService.selectUnreadCount(19L);
+        System.out.println(objectMapper.writeValueAsString( count));
     }
 }

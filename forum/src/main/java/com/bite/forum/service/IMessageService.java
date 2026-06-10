@@ -10,4 +10,9 @@ public interface IMessageService {
      */
     void create (Message message);
 
+    /*
+    * 查询未读信息数量
+     */
+    Integer selectUnreadCount (Long userId);
+
 }

@@ -13,6 +13,7 @@ import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -65,6 +66,19 @@ public class MessageController {
         messageService.create(message);
         return AppResult.success();
     }
+
+
+    @GetMapping("/getUnreadCount")
+    @Operation(summary = "获取未读消息数量")
+    public AppResult<Integer> getUnreadCount(HttpServletRequest request){
+        //获取当前用户信息
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute(AppConfig.USER_SESSION);
+        //获取未读消息数量
+        Integer result = messageService.selectUnreadCount(user.getId());
+        return AppResult.success(result);
+    }
+
 
 
 

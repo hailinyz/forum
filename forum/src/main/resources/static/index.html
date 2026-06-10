@@ -518,7 +518,7 @@
         error: function () {
           $.toast({
             heading: '错误',
-            text: '发送失败,请与管理员联系.',
+            text: '发送失败,请联系管理员',
             icon: 'error'
           });
         },
@@ -542,7 +542,34 @@
     // 成功后，处理小红点是否显示 #index_nva_message_badge
     function requestMessageUnreadCount () {
       $.ajax({
-        
+        type: 'GET',
+        url: 'message/getUnreadCount',
+        success:function (respData) { 
+          // ⽤状态码判断是否成功
+          if (respData.code == 0) {
+          // 处理提⽰红点
+          let messageBadgeEl = $('#index_nva_message_badge');
+            if (respData.data > 0) {
+              messageBadgeEl.show();
+            } else {
+              messageBadgeEl.hide();
+            }
+          } else {
+          // 提⽰
+          $.toast({
+            heading: '提⽰',
+            text: '⽆法获取站内信，请联系统管理员',
+            icon: 'info'
+          });
+          }
+          },
+          error: function () {
+          $.toast({
+            heading: '错误',
+            text: '出错了，请联系管理员',
+            icon: 'error'
+          });
+        },
       });
     }
     requestMessageUnreadCount();

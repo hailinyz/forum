@@ -14,4 +14,7 @@ public interface MessageMapper {
     int updateByPrimaryKeySelective(Message row);
 
     int updateByPrimaryKey(Message row);
+
+    Integer selectUnreadCount (Long userId);
+
 }
