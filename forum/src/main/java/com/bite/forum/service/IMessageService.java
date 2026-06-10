@@ -2,6 +2,8 @@ package com.bite.forum.service;
 
 import com.bite.forum.model.Message;
 
+import java.util.List;
+
 public interface IMessageService {
 
     /**
@@ -15,4 +17,9 @@ public interface IMessageService {
      */
     Integer selectUnreadCount (Long userId);
 
+
+    /*
+    根据接收这ids查询所有站内信
+     */
+    List<Message> selectByReceiveUserId (Long receiveUserId);
 }

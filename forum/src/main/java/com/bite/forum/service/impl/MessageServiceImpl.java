@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 @Slf4j
@@ -81,6 +82,18 @@ public class MessageServiceImpl implements IMessageService {
         return count;
     }
 
+    @Override
+    public List<Message> selectByReceiveUserId(Long receiveUserId) {
+        //非空校验
+        if (receiveUserId == null){
+            //打印日志
+            log.info(ResultCode.FAILED_PARAMS_VALIDATE.toString());
+            //抛异常
+            throw new ApplicationException(AppResult.failed(ResultCode.FAILED_PARAMS_VALIDATE));
+        }
+        List<Message> result = messageMapper.selectByReceiveUserId(receiveUserId);
+        return result;
+    }
 
 
 

@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 
 @SpringBootTest
 class MessageServiceImplTest {
@@ -34,5 +36,11 @@ class MessageServiceImplTest {
     void selectUnreadCount() throws JsonProcessingException {
         Integer count = messageService.selectUnreadCount(19L);
         System.out.println(objectMapper.writeValueAsString( count));
+    }
+
+    @Test
+    void selectByReceiveUserId() throws JsonProcessingException {
+        List<Message> result = messageService.selectByReceiveUserId(19L);
+        System.out.println(objectMapper.writeValueAsString(result));
     }
 }

@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @Slf4j
 @RequestMapping("/message")
@@ -76,6 +78,18 @@ public class MessageController {
         User user = (User) session.getAttribute(AppConfig.USER_SESSION);
         //获取未读消息数量
         Integer result = messageService.selectUnreadCount(user.getId());
+        return AppResult.success(result);
+    }
+
+
+    @Operation(summary = "查询用户的所有站内信")
+    @GetMapping("/getAll")
+    public AppResult<List<Message>> getAll(HttpServletRequest request){
+        //获取当前用户信息
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute(AppConfig.USER_SESSION);
+        //获取用户站内信
+        List<Message> result = messageService.selectByReceiveUserId(user.getId());
         return AppResult.success(result);
     }
 

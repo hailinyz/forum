@@ -63,4 +63,5 @@ public class User {
 
     @Schema(description = "更新时间")
     private Date updateTime;
+
 }
